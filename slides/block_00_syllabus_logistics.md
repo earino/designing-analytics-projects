@@ -120,16 +120,17 @@ Your job: Scope it professionally using the Brief framework.
 
 ## Weekly Write-ups
 
-**10 submissions** from February through April
+**6 submissions** from Feb 10 – Mar 17
 
-| Phase | Weeks | Focus |
-|-------|-------|-------|
-| Pre-Assignment | 1–5 | Capstone search, concept practice |
-| Post-Assignment | 6–10 | Scaffolded Brief for your capstone |
+| Week | Due | Topic |
+|------|-----|-------|
+| 1–2 | Feb 10, 17 | Search kickoff, Counter-metrics |
+| 3–4 | Feb 24, Mar 3 | Methodology, Project evaluation |
+| 5–6 | Mar 10, 17 | Pre-mortem, Readiness check |
 
 **Grading:** Pass/fail. Genuine engagement matters, not perfection.
 
-By Week 10: You have a complete Brief for your capstone.
+Your actual capstone Brief is built via PID (due Mar 30).
 
 ---
 

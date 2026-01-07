@@ -2,25 +2,28 @@
 
 ## Overview
 
-These 10 weekly prompts span February through April. They are designed around one critical reality: **students don't have capstone projects assigned until March 16**.
+These 6 weekly prompts span February 10 through March 17. They prepare you for your capstone project through practice exercises and concept application.
 
 **Structure:**
-- **Weeks 1-5 (Pre-Assignment):** Reflective journaling, concept application, and skill practice
-- **Weeks 6-10 (Post-Assignment):** Scaffolded Brief sections for actual capstone
+- **Weeks 1-6 (Feb 10 – Mar 17):** Concept practice, capstone search journey, skill building
+- **Your actual capstone Brief** is built through the PID process (due Mar 30), not these write-ups
 
 **Grading:** Pass/Fail
 **Length:** ~1 page per write-up
-**Submission:** Via LMS by Sunday 23:59 CET each week
+**Submission:** Via LMS by Monday 23:59 CET each week
+
+| Week | Due Date | Topic |
+|------|----------|-------|
+| 1 | Feb 10 | Capstone Search Kickoff |
+| 2 | Feb 17 | Counter-Metrics in the Wild |
+| 3 | Feb 24 | Analysis Methodology Selection |
+| 4 | Mar 3 | Evaluating Project Opportunities |
+| 5 | Mar 10 | Pre-Mortem on a Hypothetical |
+| 6 | Mar 17 | Capstone Readiness Check |
 
 ---
 
-# Phase 1: Pre-Assignment (Weeks 1-5)
-
-*You are searching for capstone projects. These prompts help you apply course concepts while documenting your journey.*
-
----
-
-## Week 1: Capstone Search Kickoff
+## Week 1: Capstone Search Kickoff (Due: Feb 10)
 
 ### Prompt
 
@@ -58,7 +61,7 @@ Document the start of your capstone search journey.
 
 ---
 
-## Week 2: Counter-Metrics in the Wild
+## Week 2: Counter-Metrics in the Wild (Due: Feb 17)
 
 ### Prompt
 
@@ -95,7 +98,7 @@ Find and analyze a real-world example of metric optimization gone wrong.
 
 ---
 
-## Week 3: Analysis Methodology Selection
+## Week 3: Analysis Methodology Selection (Due: Feb 24)
 
 ### Prompt
 
@@ -123,10 +126,10 @@ Practice selecting and justifying foundational analyses for a real business prob
      - What would you learn from it?
      - What would it NOT tell you?
 
-   *Reminder — The 8 Foundational Analyses:*
+   *Reminder — The 9 Foundational Analyses:*
    - Acquisition: Funnel, Channel Attribution, Campaign Effectiveness, CAC/LTV
    - Retention: Retention Analysis, Power User Analysis, Failure Analysis
-   - Growth: Expansion & Monetization
+   - Growth: Expansion & Monetization, Ecosystem Analysis
 
 2. **Data Validity Checks (Stop/Go Gates)**
    - What must be true about the data before you can draw conclusions?
@@ -152,7 +155,7 @@ Practice selecting and justifying foundational analyses for a real business prob
 
 ---
 
-## Week 4: Evaluating Project Opportunities
+## Week 4: Evaluating Project Opportunities (Due: Mar 3)
 
 ### Prompt
 
@@ -200,7 +203,7 @@ Update on your capstone search and evaluate potential projects.
 
 ---
 
-## Week 5: Pre-Mortem on a Hypothetical
+## Week 5: Pre-Mortem on a Hypothetical (Due: Mar 10)
 
 ### Prompt
 
@@ -209,7 +212,7 @@ Practice the pre-mortem exercise on a project you're NOT doing.
 **Your task:**
 
 Choose one of the following:
-- One of the 18 scenarios from the class assignment
+- One of the scenarios from the class assignment
 - A potential capstone project you decided NOT to pursue
 - A hypothetical project based on your work experience
 
@@ -247,186 +250,52 @@ Choose one of the following:
 
 ---
 
-# Phase 2: Post-Assignment (Weeks 6-10)
-
-*You now have a capstone project assigned. These prompts build your Analytics Project Brief section by section.*
-
----
-
-## Week 6: Problem & Context
+## Week 6: Capstone Readiness Check (Due: Mar 17)
 
 ### Prompt
 
-Write the **Problem & Context** section for your actual capstone project.
-
-**Your submission should address:**
-
-1. **The Business Question (1-2 sentences)**
-   - What question is your capstone trying to answer?
-   - Frame it as a question, not a task
-
-2. **Who Is Asking and Why Now?**
-   - Who is your sponsor?
-   - Why is this question being asked now?
-   - What's the business context?
-
-3. **What Decision Will This Inform?**
-   - What will your sponsor do differently based on your findings?
-   - Be specific: "decide whether to..." or "choose between..."
-
-4. **Initial Hypothesis**
-   - What do you think you'll find?
-   - This can change as you learn more
-
-**Reflection:** How does having an actual project feel different from the hypothetical exercises?
-
----
-
-*Before submitting: What decision does your capstone drive? What could break if it succeeds?*
-
----
-
-## Week 7: Metrics
-
-### Prompt
-
-Define the **Metrics** for your capstone.
+Projects are assigned on March 16. This is your final write-up before you begin building your actual capstone Brief through the PID process (due Mar 30).
 
 **Your submission should include:**
 
-1. **Primary Metric**
-   - Precise, operational definition
-   - Numerator and denominator if ratio
-   - Timeframe, granularity, exclusions
-   - **Test:** Could someone write SQL from your definition?
+1. **Search Journey Summary**
+   - How did your capstone search go?
+   - What worked? What didn't?
+   - What would you do differently if you had to start over?
 
-2. **Counter-Metrics (2-3)**
-   - For each:
-     - Definition (same precision as primary)
-     - Type: Guardrail or Tradeoff
-     - Why it could break if you succeed on the primary
-     - How you'll monitor it
+2. **Key Lessons from Write-ups**
+   - What's the most important thing you learned from each exercise?
+     - Week 1 (Search Kickoff): _____
+     - Week 2 (Counter-Metrics): _____
+     - Week 3 (Methodology Selection): _____
+     - Week 4 (Project Evaluation): _____
+     - Week 5 (Pre-Mortem): _____
 
-3. **Data Availability**
-   - Where does this data come from?
-   - Do you have access yet?
-   - What's blocking access (if anything)?
+3. **Your Capstone Brief Checklist**
+   - Based on what you've practiced, what will you prioritize when building your Brief?
+   - What's your plan for:
+     - Defining a precise primary metric?
+     - Identifying counter-metrics?
+     - Mapping stakeholders (especially blockers)?
+     - Writing your pre-mortem?
 
-**Reflection:** What did the "What Breaks" exercise reveal about your primary metric?
+4. **Questions for Your Sponsor**
+   - List 3-5 questions you'll ask your sponsor in your first meeting
+   - These should help you fill out your Brief
 
----
+5. **Confidence Check**
+   - On a scale of 1-5, how confident are you in:
+     - Understanding what makes a good capstone project? ___
+     - Defining metrics with precision? ___
+     - Identifying what could break? ___
+     - Navigating stakeholder dynamics? ___
+   - For any score below 4: What will you do to improve?
 
-*Before submitting: What decision does your capstone drive? What could break if it succeeds?*
-
----
-
-## Week 8: Stakeholder Map
-
-### Prompt
-
-Create the **Stakeholder Map** for your capstone.
-
-**Your submission should include:**
-
-1. **Power-Interest Grid**
-   - Place your actual stakeholders (by name or role)
-   - Explain your reasoning for each placement
-
-   | | High Interest | Low Interest |
-   |---|---|---|
-   | **High Power** | | |
-   | **Low Power** | | |
-
-2. **Champion**
-   - Who is your strongest advocate?
-   - What do they need from you to advocate effectively?
-
-3. **Blocker**
-   - Who might resist your findings?
-   - What's their motivation?
-   - What's your mitigation strategy?
-
-4. **Influence Strategy**
-   - For your key stakeholder, which influence approach will you use?
-   - Why that strategy for that person?
-
-**Reflection:** What's the conversation you're most nervous about having?
+**Reflection:** What are you most excited about? What are you most nervous about?
 
 ---
 
-*Before submitting: What decision does your capstone drive? What could break if it succeeds?*
-
----
-
-## Week 9: Methodology & Scope
-
-### Prompt
-
-Define the **Methodology and Scope** for your capstone.
-
-**Your submission should include:**
-
-1. **Analysis Selection (2-3 Analyses)**
-   - Which foundational analyses will you use?
-   - For each: What specific question does it answer in your context?
-
-2. **Data Requirements**
-   - What tables/data sources do you need?
-   - What's the status of access?
-   - What cleaning or preparation is needed?
-
-3. **Scope Definition**
-   - **In Scope:** What's included?
-   - **Out of Scope:** What's excluded and why?
-
-4. **Key Dependencies and Risks**
-   - What could block your progress?
-   - What's your mitigation for each?
-
-**Reflection:** What's the minimum viable analysis that would still be valuable?
-
----
-
-*Before submitting: What decision does your capstone drive? What could break if it succeeds?*
-
----
-
-## Week 10: Pre-Mortem & Synthesis
-
-### Prompt
-
-Complete your Brief with a **Pre-Mortem** and synthesize your capstone planning.
-
-**Your submission should include:**
-
-1. **Pre-Mortem for YOUR Capstone**
-   - Imagine it's July 2026. Your capstone failed.
-   - Write 2-3 paragraphs describing what went wrong
-   - Be specific to your actual project, stakeholders, and risks
-   - What should you have done differently?
-
-2. **Complete Brief Summary**
-   - In 5-7 bullet points, summarize your capstone Brief:
-     - Problem
-     - Primary metric
-     - Key counter-metric
-     - Methodology
-     - Main risk
-     - Key stakeholder challenge
-
-3. **Evolution Reflection**
-   - How has your project scope changed since Week 6?
-   - What do you understand now that you didn't at the start?
-
-4. **Advice to Yourself**
-   - What advice would you give yourself at the start of this process?
-   - What will you do differently when you start executing?
-
-**Reflection:** What did you learn about project scoping that you'll carry forward in your career?
-
----
-
-*Final check: Does your capstone drive a decision? Have you identified what could break? Will any stakeholder be surprised?*
+*Final check: Are you ready to build a Brief that drives a decision?*
 
 ---
 
@@ -452,7 +321,7 @@ Each write-up is graded **Pass/Fail**.
 
 # Late Policy
 
-- **Due:** Sunday 23:59 CET each week
+- **Due:** Monday 23:59 CET each week
 - **Grace period:** 24 hours with no penalty
 - **After grace period:** Must request extension via email before deadline
 - **Missing more than 2 write-ups:** Course grade penalty
@@ -461,16 +330,12 @@ Each write-up is graded **Pass/Fail**.
 
 # Why This Structure?
 
-The two-phase structure matches your reality:
+These 6 write-ups prepare you for capstone success:
 
-**Weeks 1-5:** You're searching for projects. These prompts help you:
+**Weeks 1-6 (Feb 10 – Mar 17):** You're searching for and evaluating projects. These prompts help you:
 - Document your search journey (useful for reflection and troubleshooting)
 - Apply course concepts to real-world examples
 - Practice skills you'll need when you have a project
+- Build confidence before your Brief is "for real"
 
-**Weeks 6-10:** You have a project. These prompts help you:
-- Build your Brief section by section
-- Get feedback before you're too deep in execution
-- Surface risks and assumptions early
-
-By Week 10, you'll have a complete, reviewed Brief ready to guide your capstone execution.
+**After Mar 17:** Your actual capstone Brief is built through the PID process (due Mar 30). The PID template includes all Brief sections. These write-ups have prepared you to fill it out effectively.

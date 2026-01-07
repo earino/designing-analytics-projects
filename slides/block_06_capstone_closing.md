@@ -438,40 +438,22 @@ Common Qs:
 
 ## Weekly Write-Ups: What to Expect
 
-From February through April, you'll submit weekly write-ups.
+You'll submit 6 weekly write-ups from Feb 10 – Mar 17.
 
-**The reality:** You won't have capstone projects until mid-March. So we have two phases.
-
-| Phase | Weeks | Focus |
-|-------|-------|-------|
-| **Pre-Assignment** | 1-5 | Capstone search journey, concept application, skill practice |
-| **Post-Assignment** | 6-10 | Scaffolded Brief sections for your actual capstone |
+These are **practice exercises** that prepare you for your capstone. Your actual Brief is built through the PID process (due Mar 30).
 
 ---
 
-## Phase 1: Before You Have a Project (Weeks 1-5)
+## Weekly Write-Up Schedule
 
-| Week | Focus |
-|------|-------|
-| 1 | Capstone search kickoff |
-| 2 | Counter-metrics in the wild |
-| 3 | Analysis Methodology Selection |
-| 4 | Evaluating project opportunities |
-| 5 | Pre-mortem on a hypothetical |
-
----
-
-## Phase 2: After Project Assignment (Weeks 6-10)
-
-| Week | Focus |
-|------|-------|
-| 6 | Problem & Context (your actual capstone) |
-| 7 | Metrics — primary + counter-metrics |
-| 8 | Stakeholder Map — Power-Interest Grid |
-| 9 | Methodology & Scope |
-| 10 | Pre-Mortem & Synthesis |
-
-**By Week 10:** You have a complete Brief ready to guide execution.
+| Week | Due Date | Topic |
+|------|----------|-------|
+| 1 | Feb 10 | Capstone Search Kickoff |
+| 2 | Feb 17 | Counter-Metrics in the Wild |
+| 3 | Feb 24 | Analysis Methodology Selection |
+| 4 | Mar 3 | Evaluating Project Opportunities |
+| 5 | Mar 10 | Pre-Mortem on a Hypothetical |
+| 6 | Mar 17 | Capstone Readiness Check |
 
 ---
 
@@ -482,8 +464,10 @@ From February through April, you'll submit weekly write-ups.
 **Pass/Fail.** Genuine engagement matters, not perfection.
 
 **Sample prompts:**
-> Week 2: "Find an article about metric optimization gone wrong. Apply the 'What Breaks' framework."
-> Week 7: "Define your primary metric with SQL-level precision. What are your counter-metrics?"
+> Week 2 (Feb 17): "Find an article about metric optimization gone wrong. Apply the 'What Breaks' framework."
+> Week 4 (Mar 3): "Evaluate 1-2 potential capstone projects against the red flags checklist."
+
+**By Week 6 (Mar 17):** You're ready to build your real Brief via PID.
 
 ---
 
@@ -588,7 +572,7 @@ Cold call 2-3 students.
 - Scenario email: Today
 - Assignment due: January 16
 - Exam: January 27
-- Weekly write-ups: February–April
+- Weekly write-ups: Feb 10 – Mar 17 (6 weeks)
 
 **Contact:**
 - rubiae@ceu.edu

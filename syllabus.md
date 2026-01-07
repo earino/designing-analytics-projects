@@ -281,7 +281,7 @@ Each analysis introduced through its Analytics Project Brief example.
 |-----------|--------|-----|-------------|
 | **Scenario → Brief** | 30% | Jan 16, 2026 | Complete an Analytics Project Brief for your assigned scenario |
 | **Pen & Paper Exam** | 30% | Jan 27, 2026 | Closed book, one A4 cheat sheet allowed |
-| **Weekly Write-ups** | 30% | Feb–Apr 2026 | Scaffolded prompts building toward your capstone Brief |
+| **Weekly Write-ups** | 30% | Feb 10 – Mar 17 | 6 practice exercises preparing you for your capstone |
 | **Participation** | 10% | During class | Engagement in discussions and exercises |
 
 ### Scenario → Brief Assignment (30%)
@@ -311,23 +311,22 @@ Each student receives a unique 2-page business scenario describing a company, pr
 
 ### Weekly Write-ups (30%)
 
-From February through April, you'll submit 10 weekly write-ups. Because capstone projects aren't assigned until mid-March, we have two phases:
+You'll submit 6 weekly write-ups from February 10 through March 17. These are practice exercises that prepare you for your capstone. Your actual capstone Brief is built through the PID process (due March 30).
 
-**Phase 1: Pre-Assignment (Weeks 1-5)**
-- Reflective journaling on your capstone search journey
-- Applying course concepts to real-world examples
-- Practicing stakeholder management and influence strategies
-
-**Phase 2: Post-Assignment (Weeks 6-10)**
-- Scaffolded Brief sections for your actual capstone project
-- Problem → Metrics → Stakeholders → Methodology → Pre-Mortem
+| Week | Due Date | Topic |
+|------|----------|-------|
+| 1 | Feb 10 | Capstone Search Kickoff |
+| 2 | Feb 17 | Counter-Metrics in the Wild |
+| 3 | Feb 24 | Analysis Methodology Selection |
+| 4 | Mar 3 | Evaluating Project Opportunities |
+| 5 | Mar 10 | Pre-Mortem on a Hypothetical |
+| 6 | Mar 17 | Capstone Readiness Check |
 
 **Grading:** Pass/fail per submission. Genuine engagement matters, not perfection.
 
 **Sample prompts:**
-- Week 2: "Find an article about metric optimization gone wrong. Apply the 'What Breaks' framework."
-- Week 4: "Evaluate 1-2 potential capstone projects against the red flags checklist."
-- Week 7: "Define your primary metric with SQL-level precision. What are your counter-metrics?"
+- Week 2 (Feb 17): "Find an article about metric optimization gone wrong. Apply the 'What Breaks' framework."
+- Week 4 (Mar 3): "Evaluate 1-2 potential capstone projects against the red flags checklist."
 
 ### Participation (10%)
 
