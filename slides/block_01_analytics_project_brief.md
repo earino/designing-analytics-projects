@@ -145,7 +145,7 @@ By the end of this course, you will be able to:
 |-----------|--------|------|
 | Scenario → Brief | 30% | Jan 16 |
 | Pen & Paper Exam | 30% | Jan 27 |
-| Weekly Write-ups | 30% | Feb–Apr |
+| Weekly Write-ups | 30% | Feb 10 – Mar 17 |
 | Participation | 10% | During class |
 
 Each of you gets a **unique scenario** for the Brief assignment.

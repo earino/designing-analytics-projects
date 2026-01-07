@@ -82,7 +82,7 @@ Based in southern Spain.
 |-----------|--------|-----|
 | **Scenario → Brief** | 30% | Jan 16, 2026 |
 | **Pen & Paper Exam** | 30% | Jan 27, 2026 |
-| **Weekly Write-ups** | 30% | Feb–Apr 2026 |
+| **Weekly Write-ups** | 30% | Feb 10 – Mar 17 |
 | **Participation** | 10% | During class |
 
 No surprises. Each component connects to what we learn.

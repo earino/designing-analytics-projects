@@ -160,7 +160,7 @@ January 8, 2026</p>
 <tr>
 <td>Weekly Write-ups</td>
 <td>30%</td>
-<td>Feb–Apr</td>
+<td>Feb 10 – Mar 17</td>
 </tr>
 <tr>
 <td>Participation</td>
@@ -496,29 +496,40 @@ What questions would you ask to make this precise?</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-header="ECBS5228A: Designing Analytics Projects" data-footer="Block 1: The Analytics Project Brief" data-theme="default" lang="en-US" data-marpit-pagination="29" style="--paginate:true;--header:ECBS5228A: Designing Analytics Projects;--footer:Block 1: The Analytics Project Brief;--theme:default;" data-marpit-pagination-total="59">
 <header>ECBS5228A: Designing Analytics Projects</header>
-<h2 id="section-4-data-validity-checks">Section 4: Data Validity Checks</h2>
-<p><strong>Stop/Go gates</strong> before you analyze:</p>
+<h2 id="section-4-data-validity-checks--stopgo-gates">Section 4: Data Validity Checks — Stop/Go Gates</h2>
+<p><strong>Before you analyze, verify your data is trustworthy:</strong></p>
 <table>
 <thead>
 <tr>
 <th>Check</th>
-<th>How to validate</th>
-<th>Stop if...</th>
+<th>How to Validate</th>
+<th>Stop If...</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Events fire on iOS</td>
-<td>Compare to Android</td>
+<td>Compare iOS vs Android event counts</td>
 <td>&gt;10% discrepancy</td>
 </tr>
 <tr>
 <td>No duplicate users</td>
-<td>Check user_id uniqueness</td>
+<td><code>SELECT COUNT(*) vs COUNT(DISTINCT user_id)</code></td>
 <td>&gt;1% duplicates</td>
+</tr>
+<tr>
+<td>Attribution window consistent</td>
+<td>Check <code>first_touch</code> vs <code>last_touch</code> logic</td>
+<td>Multiple conflicting windows</td>
+</tr>
+<tr>
+<td>Historical data complete</td>
+<td>Count events by month</td>
+<td>Any month &lt;80% of expected</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Grading note:</strong> Your Brief must include 2+ specific checks with validation method AND stop condition.</p>
 <p>If data is broken, <strong>stop</strong>. Don't draw conclusions from bad data.</p>
 <footer>Block 1: The Analytics Project Brief</footer>
 </section>
@@ -911,7 +922,9 @@ Cold call. Looking for answers like:
 - Whether this is a real priority or someone's pet project</p></div><div class="bespoke-marp-note" data-index="24" tabindex="0"><p>INSTRUCTOR NOTE:
 Give 30 sec to think, 1 min to discuss with neighbor, then share out.
 Looking for: What counts as engagement? DAU? Time spent? Actions?
-Which users? New? All? Time window?</p></div><div class="bespoke-marp-note" data-index="29" tabindex="0"><p>INSTRUCTOR NOTE:
+Which users? New? All? Time window?</p></div><div class="bespoke-marp-note" data-index="28" tabindex="0"><p>INSTRUCTOR NOTE:
+Emphasize this is a grading criterion. Students who write generic &quot;we'll check data quality&quot;
+without specific checks, validation methods, and stop conditions will lose points.</p></div><div class="bespoke-marp-note" data-index="29" tabindex="0"><p>INSTRUCTOR NOTE:
 Enforce this. Attention spans need it.
 Resume at exactly 5 minutes.</p></div><div class="bespoke-marp-note" data-index="38" tabindex="0"><p>INSTRUCTOR NOTE:
 Take 3-4 questions.

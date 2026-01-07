@@ -104,7 +104,7 @@ Each Brief section maps to a capstone question:
 
 ## Building Your Brief Over Time
 
-**You'll build your capstone Brief through weekly write-ups (Feb-Apr).**
+**You'll practice Brief concepts through weekly write-ups (Feb 10 – Mar 17).**
 
 First you'll practice concepts while searching for projects, then build Brief sections once assigned.
 
