@@ -1,0 +1,7 @@
+# Requirements for course utilities
+# Install with: pip install -r requirements.txt
+
+# Slide overflow checker (scripts/check_overflow.py)
+playwright>=1.40
+
+# After installing, run: playwright install chromium
