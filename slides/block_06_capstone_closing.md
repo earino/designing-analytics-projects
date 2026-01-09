@@ -354,16 +354,37 @@ Sponsors often want **more** than is feasible.
 
 <!--
 INSTRUCTOR NOTE:
-Red flags:
-- "Somewhere" = data access uncertain
-- "Once a month" = disengaged sponsor
-- "Why users churn" = broad, needs scoping
-- Startup = data quality may be poor
 
-Questions to ask:
-- Can I see the data before committing?
-- Who else can I contact for feedback?
-- What specific decisions will this inform?
+**Background:** This exercise applies the red flags framework to a realistic scenario. Every phrase in the founder's pitch contains a warning sign. Students should practice recognizing these before they encounter them in real life.
+
+**Key point:** Learn to hear the warning signs hidden in optimistic language.
+
+**Say something like:**
+"Here's a real scenario. A startup founder approaches you. Listen to what they say:
+
+'We have 6 months of user data.' — Okay, that's something.
+
+'I want to know why users churn and how to fix it.' — Broad. Very broad. 'Why users churn' could mean a hundred different analyses. And 'how to fix it' implies they want you to solve the problem, not just diagnose it.
+
+'I'm super busy but I can meet once a month.' — Red flag. Once a month means no feedback loop. You'll do work, wait weeks for input, and maybe find out you went in the wrong direction.
+
+'Data is in a CSV somewhere.' — Major red flag. 'Somewhere' means they don't know where it is, which means they haven't looked at it, which means they don't know if it's usable.
+
+Take 2 minutes. Would you take this project? What questions would you ask before deciding?"
+
+**Facilitation:** Give them 2 minutes to think. Then cold-call 2-3 students.
+
+**Strong answers to look for:**
+- "I'd want to see the data before committing" — Correct. Never commit blind.
+- "I'd ask who else I can contact for feedback" — Good. If the founder is busy, who's my day-to-day contact?
+- "I'd ask what specific decision this informs" — Excellent. 'Why users churn' isn't actionable. 'Should we change onboarding or pricing?' is.
+- "I'd scope it down to one question" — Great. Turn 'why users churn' into 'what's the primary driver of D30 churn?'
+
+**Weak answers to push back on:**
+- "I'd take it because startups are exciting" — Excitement doesn't make up for bad project structure.
+- "I'd figure it out as I go" — That's how capstones fail.
+
+**Transition:** "Now let me tell you about your assignment..."
 -->
 
 ---
@@ -425,6 +446,33 @@ This is intentional:
 - Mirrors real-world (you don't get the same problem as a colleague)
 
 Your scenario will be distributed via email after class today.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students often want to collaborate, especially on challenging assignments. This slide explains why unique scenarios are essential. The key is framing it positively (forces independent thinking, mirrors reality) rather than punitively (prevents cheating).
+
+**Key point:** Unique scenarios aren't about distrust — they're about developing individual judgment that you'll need in your career.
+
+**Say something like:**
+"Each of you will receive a different scenario. This is intentional, and let me explain why.
+
+First, it prevents copying. That's the obvious one. But that's not the main reason.
+
+The main reason is this: it forces independent thinking. In your career, you won't have a classmate with the same problem. You'll have to scope projects yourself, make judgment calls yourself, identify blockers yourself. This assignment simulates that.
+
+It also creates variety for class discussion. When we review these in the exam or in office hours, we can discuss different approaches to different problems. That's more valuable than everyone having the same answer.
+
+And it mirrors reality. Your colleague doesn't get the same project as you. You can discuss frameworks and approaches — that's valuable — but you can't copy their scoping document. Same here."
+
+**If asked:** "Can we work together?"
+A: You can discuss the Brief framework. You can ask each other 'how do you think about counter-metrics?' You cannot share your specific scenario or your specific Brief sections. Think of it like studying together for an exam — you can quiz each other on concepts, but you can't share your answers during the test.
+
+**If asked:** "What if we accidentally got the same scenario?"
+A: You won't. Each scenario is generated uniquely. If you think you received the same one as someone else, email me immediately — it would be a system error.
+
+**Transition:** "Let me show you what excellent looks like..."
+-->
 
 ---
 
@@ -552,6 +600,34 @@ This is where most points are lost. Two parts:
 4. **Work through stakeholders** — Who might block? Why?
 5. **Select methodology** — Which 2-3 analyses apply?
 6. **Write the pre-mortem last** — After you understand the full picture
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This sequence matters. Students often jump straight to methodology ("I'll do a funnel analysis!") without understanding the decision context. Or they write the pre-mortem first and it's too generic. This order forces precision at each stage.
+
+**Key point:** The order isn't arbitrary — each step informs the next. Shortcuts create incoherent Briefs.
+
+**Say something like:**
+"Let me explain why this order matters.
+
+Read the scenario twice. First time for the overall situation — what's the company, what's the problem, what are the constraints. Second time for the details — the specific data available, the stakeholder dynamics, the timeline.
+
+Identify the core decision first. Before you pick metrics or analyses, ask: what decision will this inform? 'Should we shift budget?' 'Should we change the onboarding flow?' If you can't state the decision, you're not ready to write the Brief.
+
+Draft the metric first. This forces precision early. 'Conversion rate' is vague. 'Users who complete checkout within 7 days of first session' is precise. Getting this right early makes everything else easier.
+
+Work through stakeholders next. Who cares about this decision? Who might block it? Why? This is where you identify the politics before you run the analysis.
+
+Select methodology after you understand the context. Not before. If you jump to 'I'll do a cohort analysis' before understanding the decision, you might pick the wrong analysis.
+
+Write the pre-mortem last. Why? Because it's a failure story about THIS project. If you don't understand your metrics, stakeholders, and methodology, your pre-mortem will be generic. 'The data was bad.' That's not useful. A good pre-mortem is specific to what could go wrong with YOUR approach."
+
+**If asked:** "What if I want to do it in a different order?"
+A: You can. But I've seen what happens when students skip steps or reorder them — the Brief sections don't connect, and that's where coherence points are lost. This order is a recommendation based on what works.
+
+**Transition:** "Questions before we move on?..."
+-->
 
 ---
 
