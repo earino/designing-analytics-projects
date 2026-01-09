@@ -636,7 +636,18 @@ Months to recover CAC. Needs: monthly revenue by cohort.</p>
 <footer>Block 4: Application &amp; Practice</footer>
 </section>
 <script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),h=Symbol();const g=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[h]||(Object.defineProperty(window,h,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await g()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const w=Symbol(),b=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();(o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o))&&a!==HTMLElement?i||customElements.define(s,r(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[w])return e[w];const i=v({target:e}),n=()=>{i(),delete e[w]},l=Object.assign(n,{cleanup:n,update:()=>b(e)});return Object.defineProperty(e,w,{configurable:!0,value:l}),l},y=document.currentScript;b(y?y.getRootNode():document)}();
-</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>INSTRUCTOR NOTE:
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is Day 2, Block 4 — the first teaching block after a 4-day break. Students have had time to process Day 1 but may have forgotten specifics. Today shifts from content delivery to application. The goal is for students to leave ready to complete their assignment.
+
+**Key point:** Day 2 is practice-focused. Less new content, more application.
+
+**Say something like:**
+&quot;Good morning! Welcome to Day 2. I hope the break gave you time to digest what we covered on Wednesday.
+
+Today is different. Less lecture, more practice. By the end of today, you should feel ready to tackle your assignment.&quot;
+
+**Transition:** &quot;Let's see what we're covering this morning...&quot;</p></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>INSTRUCTOR NOTE:
 
 **Background:** Day 2 starts after a 4-day break. Students have had time to digest Day 1 concepts but may have forgotten details. The morning coffee break just ended, so energy should be reasonable. This block is the transition from &quot;learning concepts&quot; to &quot;applying concepts.&quot;
 
@@ -651,7 +662,73 @@ The goal is that by the end of today, you're ready for your assignment on Thursd
 
 **Energy management:** This is the first slide of Day 2. Take a moment to scan the room. How are energy levels? If people seem sluggish, consider a 30-second &quot;stand up and stretch&quot; before diving in.
 
-**Transition:** &quot;Let me show you what we'll cover this morning...&quot;</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>INSTRUCTOR NOTE:
+**Transition:** &quot;Let me show you what we'll cover this morning...&quot;</p></div><div class="bespoke-marp-note" data-index="2" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This overview sets expectations for the block. The timing is tight but achievable. The sequence is deliberate: start with Q&amp;A to surface confusion, then model excellence (deep dive), then practice as a group, then practice individually, then learn from common mistakes.
+
+**Key point:** The block builds from passive to active: watch → discuss → practice. By the end, students have done real work.
+
+**Say something like:**
+&quot;Here's what we'll cover this morning.
+
+First, 20 minutes of Q&amp;A. What confused you from Day 1? What questions came up over the weekend?
+
+Then I'll walk through a complete, well-written Brief. You'll see how all the pieces connect.
+
+Then YOU work — a group exercise where you debate analysis selection. Then a timed individual exercise to practice writing under pressure.
+
+We'll close with the six most common mistakes I see in Briefs. Learn from others' errors.
+
+Let's start with your questions from Day 1.&quot;
+
+**Transition:** &quot;First, let's clear up any confusion from Day 1...&quot;</p></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This section header transitions to the Q&amp;A portion. After a 4-day break, students will have varying levels of recall. This Q&amp;A serves both to surface confusion AND to get students talking early, which increases engagement for the rest of the block.
+
+**Key point:** Q&amp;A early in Day 2 prevents confusion from compounding.
+
+**Say something like:**
+&quot;Let's start with questions. What came up as you reflected on Day 1 over the weekend?&quot;
+
+**Transition:** Wait for this slide for just a moment, then advance to show the recap framework as a memory aid.</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This table serves as a visual memory aid. Students learned these 10 sections on Day 1. Showing them helps trigger recall before asking questions. The two-column layout groups related sections: left column is &quot;what are we doing,&quot; right column is &quot;how will we know if it worked.&quot;
+
+**Key point:** Use this as a reference while taking questions. Point to specific sections when answering.
+
+**Say something like:**
+&quot;Here's the Analytics Project Brief framework from Day 1 — all 10 sections. Use this as a reference as we discuss.
+
+The left column is about what you're doing: the problem, metrics, stakeholders, method, and scope.
+
+The right column is about validation: success criteria, timeline, risks, ethics, and what could go wrong.
+
+What questions do you have about any of these sections?&quot;
+
+**If asked:** &quot;Do I need all 10 sections?&quot;
+A: For your assignment, yes. In industry, you adapt. But the thinking process is what matters — you should be able to answer questions about any section even if you don't write them all down.
+
+**Transition:** &quot;Let me also show you the analyses quick reference...&quot;</p></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is the 9 analyses compressed into two lines. The one-word summaries in parentheses are the key questions each analysis answers. This structure follows the customer journey: acquire → retain → grow.
+
+**Key point:** Students should be able to match a business question to an analysis type. This is the skill the group exercise will test.
+
+**Say something like:**
+&quot;And here are the 9 analyses — 4 from Block 2 (Acquisition), 5 from Block 3 (Retention &amp; Growth).
+
+The parenthetical after each is the question that analysis answers. Funnel asks 'where do we lose them?' Attribution asks 'which channels work?' And so on.
+
+Today's group exercise will test your ability to match business questions to the right analysis. If you're fuzzy on any of these, ask now.
+
+What questions do you have about the analyses?&quot;
+
+**Common questions:**
+- &quot;What's the difference between Attribution and Campaign Effectiveness?&quot; → Attribution tells you which channels get credit. Campaign Effectiveness tells you if the spend was worth it (causal).
+- &quot;When would I use Power User vs. Retention?&quot; → Retention is about everyone. Power User is about the concentrated top — who drives most value.
+- &quot;What's Ecosystem Analysis?&quot; → How multiple products or features interact. Relevant for multi-product companies.
+
+**Transition:** &quot;Any other questions from Day 1 before we move on?&quot;</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>INSTRUCTOR NOTE:
 
 **Background:** This Q&amp;A serves two purposes: (1) surface confusion from Day 1 before we build on it, and (2) get students talking early in Day 2 to increase engagement. After a 4-day break, some concepts will have faded. Better to resurface confusion now than during the assignment.
 
@@ -689,7 +766,20 @@ Third: you don't need all 9 analyses. Most real projects use 2-3. The point of l
 **If asked:** &quot;What if my sponsor asks for an analysis I don't think is right?&quot;
 A: That's a conversation, not a conflict. Ask what decision they're trying to make. Often the 'wrong' analysis request reflects a real underlying question that a better analysis could answer.
 
-**Transition:** &quot;Now let's see how all the Brief sections work together in a real scenario...&quot;</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>INSTRUCTOR NOTE:
+**Transition:** &quot;Now let's see how all the Brief sections work together in a real scenario...&quot;</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This section transitions from Q&amp;A (reactive, student-led) to the deep dive (proactive, instructor-led). The deep dive uses a complete, well-written Brief as a teaching example. Students see how all 10 sections work together. The scenario is MindfulApp — a meditation app considering premium feature expansion.
+
+**Key point:** Model excellence before asking students to practice. Show them what &quot;good&quot; looks like.
+
+**Say something like:**
+&quot;Now that we've cleared up questions from Day 1, let me show you what a complete, well-crafted Brief looks like.
+
+On Day 1, I showed you each section in isolation. Now you'll see how they connect. This is a Brief I might write in my own work.
+
+The scenario is MindfulApp — a meditation app thinking about premium features. As we walk through, pay attention to how each section builds on the previous one.&quot;
+
+**Transition:** &quot;Let me explain why this deep dive matters...&quot;</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>INSTRUCTOR NOTE:
 
 **Background:** Day 1 taught each Brief section individually. But in practice, sections connect — the methodology must answer the problem, counter-metrics anticipate pre-mortem scenarios, stakeholder blockers shape how you present findings. This deep dive shows that coherence.
 

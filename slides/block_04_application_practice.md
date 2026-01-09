@@ -18,6 +18,21 @@ footer: 'Block 4: Application & Practice'
 **Eduardo Arino de la Rubia**
 January 12, 2026
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is Day 2, Block 4 — the first teaching block after a 4-day break. Students have had time to process Day 1 but may have forgotten specifics. Today shifts from content delivery to application. The goal is for students to leave ready to complete their assignment.
+
+**Key point:** Day 2 is practice-focused. Less new content, more application.
+
+**Say something like:**
+"Good morning! Welcome to Day 2. I hope the break gave you time to digest what we covered on Wednesday.
+
+Today is different. Less lecture, more practice. By the end of today, you should feel ready to tackle your assignment."
+
+**Transition:** "Let's see what we're covering this morning..."
+-->
+
 ---
 
 ## Welcome Back
@@ -65,12 +80,48 @@ The goal is that by the end of today, you're ready for your assignment on Thursd
 | Timed Brief Practice | 10 min |
 | Common Scoping Mistakes | 15 min |
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This overview sets expectations for the block. The timing is tight but achievable. The sequence is deliberate: start with Q&A to surface confusion, then model excellence (deep dive), then practice as a group, then practice individually, then learn from common mistakes.
+
+**Key point:** The block builds from passive to active: watch → discuss → practice. By the end, students have done real work.
+
+**Say something like:**
+"Here's what we'll cover this morning.
+
+First, 20 minutes of Q&A. What confused you from Day 1? What questions came up over the weekend?
+
+Then I'll walk through a complete, well-written Brief. You'll see how all the pieces connect.
+
+Then YOU work — a group exercise where you debate analysis selection. Then a timed individual exercise to practice writing under pressure.
+
+We'll close with the six most common mistakes I see in Briefs. Learn from others' errors.
+
+Let's start with your questions from Day 1."
+
+**Transition:** "First, let's clear up any confusion from Day 1..."
+-->
+
 ---
 
 <!-- _class: lead -->
 
 # Part 1: Q&A on Day 1
 ### *(20 minutes)*
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This section header transitions to the Q&A portion. After a 4-day break, students will have varying levels of recall. This Q&A serves both to surface confusion AND to get students talking early, which increases engagement for the rest of the block.
+
+**Key point:** Q&A early in Day 2 prevents confusion from compounding.
+
+**Say something like:**
+"Let's start with questions. What came up as you reflected on Day 1 over the weekend?"
+
+**Transition:** Wait for this slide for just a moment, then advance to show the recap framework as a memory aid.
+-->
 
 ---
 
@@ -86,6 +137,28 @@ The goal is that by the end of today, you're ready for your assignment on Thursd
 | 4. Methodology | 9. Ethics & Privacy |
 | 5. Scope & Deliverables | 10. Pre-Mortem |
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This table serves as a visual memory aid. Students learned these 10 sections on Day 1. Showing them helps trigger recall before asking questions. The two-column layout groups related sections: left column is "what are we doing," right column is "how will we know if it worked."
+
+**Key point:** Use this as a reference while taking questions. Point to specific sections when answering.
+
+**Say something like:**
+"Here's the Analytics Project Brief framework from Day 1 — all 10 sections. Use this as a reference as we discuss.
+
+The left column is about what you're doing: the problem, metrics, stakeholders, method, and scope.
+
+The right column is about validation: success criteria, timeline, risks, ethics, and what could go wrong.
+
+What questions do you have about any of these sections?"
+
+**If asked:** "Do I need all 10 sections?"
+A: For your assignment, yes. In industry, you adapt. But the thinking process is what matters — you should be able to answer questions about any section even if you don't write them all down.
+
+**Transition:** "Let me also show you the analyses quick reference..."
+-->
+
 ---
 
 ## Day 1 Recap: The Analyses
@@ -93,6 +166,30 @@ The goal is that by the end of today, you're ready for your assignment on Thursd
 **Acquisition (Block 2):** Funnel (where lose them?) → Attribution (which channels?) → Campaign (did spend work?) → CAC/LTV (worth the cost?)
 
 **Retention & Growth (Block 3):** Retention (come back?) → Power User (who matters?) → Failure (what's broken?) → Expansion (how grow?) → Ecosystem (products interact?)
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the 9 analyses compressed into two lines. The one-word summaries in parentheses are the key questions each analysis answers. This structure follows the customer journey: acquire → retain → grow.
+
+**Key point:** Students should be able to match a business question to an analysis type. This is the skill the group exercise will test.
+
+**Say something like:**
+"And here are the 9 analyses — 4 from Block 2 (Acquisition), 5 from Block 3 (Retention & Growth).
+
+The parenthetical after each is the question that analysis answers. Funnel asks 'where do we lose them?' Attribution asks 'which channels work?' And so on.
+
+Today's group exercise will test your ability to match business questions to the right analysis. If you're fuzzy on any of these, ask now.
+
+What questions do you have about the analyses?"
+
+**Common questions:**
+- "What's the difference between Attribution and Campaign Effectiveness?" → Attribution tells you which channels get credit. Campaign Effectiveness tells you if the spend was worth it (causal).
+- "When would I use Power User vs. Retention?" → Retention is about everyone. Power User is about the concentrated top — who drives most value.
+- "What's Ecosystem Analysis?" → How multiple products or features interact. Relevant for multi-product companies.
+
+**Transition:** "Any other questions from Day 1 before we move on?"
+-->
 
 ---
 
@@ -167,6 +264,23 @@ A: That's a conversation, not a conflict. Ask what decision they're trying to ma
 
 # Part 2: Deep Dive — A Complex Brief
 ### *(35 minutes)*
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This section transitions from Q&A (reactive, student-led) to the deep dive (proactive, instructor-led). The deep dive uses a complete, well-written Brief as a teaching example. Students see how all 10 sections work together. The scenario is MindfulApp — a meditation app considering premium feature expansion.
+
+**Key point:** Model excellence before asking students to practice. Show them what "good" looks like.
+
+**Say something like:**
+"Now that we've cleared up questions from Day 1, let me show you what a complete, well-crafted Brief looks like.
+
+On Day 1, I showed you each section in isolation. Now you'll see how they connect. This is a Brief I might write in my own work.
+
+The scenario is MindfulApp — a meditation app thinking about premium features. As we walk through, pay attention to how each section builds on the previous one."
+
+**Transition:** "Let me explain why this deep dive matters..."
+-->
 
 ---
 
