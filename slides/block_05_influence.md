@@ -769,6 +769,32 @@ And obviously useful when you have the data. Survey results, benchmarks, competi
 
 **Warning:** Cherry-picked social proof backfires. Be honest about what the data shows.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This slide gives practical guidance on where to find social proof. Students often don't know where to look for external validation.
+
+**Key point:** Social proof comes from four sources — survey data, benchmarks, internal precedent, and competitive intelligence. Use them honestly.
+
+**Say something like:**
+"So where do you actually find social proof? Four sources:
+
+Survey data. What do your users or customers actually say? NPS data, customer interviews, support tickets. 'Customers have been asking for this' is powerful if it's true.
+
+Industry benchmarks. What do your peers do? This is where Gartner, Forrester, and industry surveys are useful. '85% of SaaS companies have implemented this' gives cover to the decision-maker.
+
+Internal precedent. 'We did something similar for X product, and here's what happened.' This is powerful because it's your own data. They can't dismiss it as 'but our situation is different.'
+
+Competitive intelligence. What are your competitors doing? 'Spotify launched this feature 6 months ago' can motivate action. But be careful — 'because competitors are doing it' isn't always a good reason.
+
+Now, the warning on this slide is critical: Cherry-picked social proof backfires. If you selectively quote the one survey that supports your point while ignoring three that don't, you'll lose credibility when someone checks. Be honest about what the data shows. If the evidence is mixed, say so. Your credibility in future recommendations depends on being trustworthy now."
+
+**If asked:** "What if I can't find good social proof?"
+A: Then don't force it. Use a different strategy. Weak social proof is worse than none — it makes you look like you're reaching.
+
+**Transition:** "The fourth and final strategy is Consistency..."
+-->
+
 ---
 
 ## Strategy 4: Consistency (East)
@@ -831,6 +857,32 @@ The key word is genuine. If you force a connection that isn't there, it feels ma
 
 **Most presentations use 2-3 strategies combined.**
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the decision framework slide. Students need to understand that strategy selection depends on stakeholder characteristics, not personal preference.
+
+**Key point:** Match the strategy to the stakeholder type. Wrong strategy = worse than no strategy.
+
+**Say something like:**
+"Let me give you the cheat sheet.
+
+Authority works for hierarchy-respecting stakeholders. When someone cares about who said something, you lead with your senior sponsor. But it requires you to actually have that sponsor support.
+
+Credibility works for technical or skeptical stakeholders. Engineers, data scientists, CFOs who want to see the math. It requires peer validation — they need to believe the methodology is sound.
+
+Social Proof works for risk-averse stakeholders. 'What are other companies doing?' They don't want to be first; they want to be safe. It requires external data and benchmarks.
+
+Consistency works for strategy-focused stakeholders. 'This aligns with what you said matters.' It requires knowledge of their stated priorities.
+
+Here's the key insight: Most presentations use 2-3 strategies combined. You don't pick just one. For a CFO, you might lead with Social Proof (industry benchmarks) and anchor to Consistency (aligns with profitability goals). For a technical lead, you might combine Credibility (finance validated) with Authority (leadership asked us to look at this)."
+
+**If asked:** "What if I don't know which type of stakeholder they are?"
+A: Ask someone who's worked with them. Or observe in meetings: Do they ask "who said this?" (authority), "show me the math" (credibility), "what do others do?" (social proof), or "how does this fit our strategy?" (consistency)?
+
+**Transition:** "Let me show you an example that combines all four..."
+-->
+
 ---
 
 ## Example: MindfulApp Recommendation
@@ -843,6 +895,34 @@ Recommendation: "Shift $200K from paid social to referral program"
 | **Credibility** | "Finance validated our CAC calculations" |
 | **Social Proof** | "Industry benchmark is 3:1 LTV:CAC; we're at 1.2x on paid social" |
 | **Consistency** | "This aligns with our Series B milestone of positive unit economics" |
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is a worked example showing all four strategies applied to one recommendation. It demonstrates that real presentations combine multiple strategies.
+
+**Key point:** Effective influence uses 2-3 strategies together, not just one. This example shows all four for completeness.
+
+**Say something like:**
+"Let me walk through a concrete example. MindfulApp wants to shift $200K from paid social to a referral program. How do we make this case?
+
+Authority: 'The CEO asked us to find a path to profitability.' This establishes that leadership is behind this direction. It's not just the analytics team's idea.
+
+Credibility: 'Finance validated our CAC calculations.' This shows we did the work. Finance — the skeptics — signed off on the math. This builds trust in the numbers.
+
+Social Proof: 'Industry benchmark is 3:1 LTV:CAC; we're at 1.2x on paid social.' External validation. We're not just saying paid social is inefficient — the industry standard says so too. We're underperforming.
+
+Consistency: 'This aligns with our Series B milestone of positive unit economics.' This connects to stated priorities. The board said unit economics matter for Series B. This recommendation gets us there.
+
+Notice what's happening: We're not picking just one strategy. We're layering them. Authority gets attention. Credibility builds trust in the analysis. Social Proof provides external validation. Consistency anchors to priorities.
+
+In your own presentations, you'll typically lead with 2-3 of these. Pick the ones that match your stakeholder."
+
+**If asked:** "Do I need all four strategies?"
+A: No. Most presentations use 2-3. Pick the ones that match your stakeholder. Authority + Consistency for executives. Credibility + Social Proof for technical leads. Don't force strategies that don't fit.
+
+**Transition:** "Let's practice this. Quick exercise..."
+-->
 
 ---
 
@@ -893,6 +973,36 @@ Your influence strategy tells you **how to communicate it**.
 | High Power, Low Interest | Authority + Social Proof (efficiency) |
 | Low Power, High Interest | Credibility + Social Proof |
 | Low Power, Low Interest | Minimal engagement needed |
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the critical integration slide. It connects Block 4's stakeholder mapping (Power-Interest Grid) with Block 5's influence strategies. Students should see how the two frameworks work together.
+
+**Key point:** The grid tells you WHO to focus on; the strategy tells you HOW to persuade them. They're complements, not substitutes.
+
+**Say something like:**
+"This is where the two halves of Block 5 come together.
+
+Your Power-Interest Grid tells you WHAT to communicate. High power, high interest? They need the full picture — detailed engagement. High power, low interest? Keep it brief — just tell them what they need to know.
+
+Your influence strategy tells you HOW to communicate. Are they hierarchy-respecting? Use authority. Are they data-driven? Use credibility and social proof.
+
+Let me walk through each quadrant:
+
+High Power, High Interest: These are your 'Manage Closely' stakeholders. They have the power to approve or kill your project, and they care about the details. Lead with Authority — 'the CEO asked us to look at this' — and anchor with Consistency — 'this aligns with our Q2 priorities.' They need to see strategic alignment.
+
+High Power, Low Interest: These are 'Keep Satisfied' stakeholders. They can veto, but they don't want details. Lead with Authority to get their attention, and use Social Proof to show efficiency — 'other teams have done this successfully; it won't require your time.' Make it easy to say yes.
+
+Low Power, High Interest: These are 'Keep Informed' stakeholders. They care a lot but can't approve. Lead with Credibility — show them the rigor — and Social Proof — 'this is industry best practice.' They often become your champions if you earn their trust.
+
+Low Power, Low Interest: Minimal engagement. A brief update is fine."
+
+**If asked:** "What if someone is both hierarchy-respecting AND data-driven?"
+A: Use both strategies. Authority to frame, Credibility to support. Most real stakeholders respond to multiple strategies — that's why we combine 2-3.
+
+**Transition:** "Once you've mapped your stakeholders, you need to arm your champions and neutralize your blockers. Let's start with champions..."
+-->
 
 ---
 
@@ -1072,6 +1182,36 @@ Push back on weak approaches. Ask "What if the Growth PM pushes back with...?"
 5. **Make it easy to understand** — Processing fluency
 
 Influence isn't manipulation. It's clear communication + stakeholder awareness.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the synthesis slide after the influence exercise. The five principles distill everything from Block 5 into actionable guidance. This is what students should remember when they walk out.
+
+**Key point:** These five principles are the "cheat sheet" for professional influence. If they remember nothing else, remember these.
+
+**Say something like:**
+"Let me pull together what we learned from that exercise and the block overall.
+
+Five things that make influence work:
+
+First, know your audience. One person, not 'the team.' Sarah the CFO, not 'leadership.' You can't influence 'the team' — you influence individuals with individual concerns.
+
+Second, have a clear recommendation. A specific action, not 'we should think about this more.' Tell them exactly what you want: 'Shift $200K from paid social to referral program.' If you don't know what you want, how can they give it to you?
+
+Third, choose strategies based on the stakeholder. Different people respond to different things. The technical lead wants credibility. The executive wants efficiency. The risk-averse PM wants social proof. Match the strategy to the person.
+
+Fourth, pre-brief blockers. Never surprise anyone with uncomfortable findings in a meeting. That's when they get defensive and dig in. Private conversation first. Give them time to process. Incorporate their feedback. Then the public meeting is a formality.
+
+Fifth, make it easy to understand. Processing fluency. Simple beats complex. If your recommendation is hard to understand, it's hard to trust. Do the work of simplification so they don't have to.
+
+Here's the key reframe: Influence isn't manipulation. Manipulation involves deception. Influence is just clear communication plus stakeholder awareness. It's a professional skill, not a dark art."
+
+**If asked:** "Which principle is most important?"
+A: Pre-briefing blockers. It's the one that saves the most heartache. Everything else can be fixed in the moment. A blindsided blocker who digs in publicly? That's much harder to recover from.
+
+**Transition:** "Let me summarize Block 5 overall..."
+-->
 
 ---
 
