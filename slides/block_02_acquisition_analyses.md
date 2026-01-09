@@ -251,6 +251,32 @@ A: That's a common problem. You'll need to figure out what events exist and what
 
 **Overall:** 61.3% cart-to-confirm
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the fundamental calculation of funnel analysis. Students need to understand both the step-by-step rates AND the overall rate. The step-by-step view reveals WHERE drops happen; the overall rate gives the total picture. Note that the numbers compound: 0.85 × 0.88 × 0.89 ≈ 0.67, but we show 61.3% because of rounding at each step.
+
+**Key point:** Calculate step-by-step rates, not just overall. The step-by-step view reveals where the problem is.
+
+**Say something like:**
+"Let me walk through the math. Conversion rate is users at step N+1 divided by users at step N. Simple division.
+
+[Point to table]
+
+10,000 users hit the cart. 8,500 made it to shipping — that's 85%. Of those 7,820 who saw shipping, 6,882 made it to payment — 88%. Of those, 6,125 confirmed — 89%.
+
+Now, 85% sounds great. 88% sounds great. 89% sounds great. But multiply them together and you get 61.3% overall.
+
+This is why step-by-step matters. If someone just told you 'checkout is 61%,' you might think 'okay, we're losing 39% somewhere.' But where? You don't know.
+
+When you break it down by step, you see the biggest drop is cart to shipping — 15% lost. That's 1,500 people. Maybe shipping costs are scaring them off. The payment and confirm steps are actually pretty healthy."
+
+**If asked:** "Should we count users or sessions?"
+A: Usually users, to avoid double-counting the same person who abandons and returns. But depends on your business — some use sessions if repeat purchases in same session matter.
+
+**Transition:** "Let me show you what this looks like visually..."
+-->
+
 ---
 
 <!-- _header: '' -->
@@ -267,6 +293,31 @@ Two ways to view:
 - **Absolute view:** Which step loses the most users?
 
 Sometimes they're different. A 5% drop from 100K users (5K lost) matters more than a 20% drop from 1K users (200 lost).
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This distinction trips up many analysts. Percentage view finds the "leakiest" step; absolute view finds where the most opportunity is. For prioritization, you usually want absolute view — that's where fixing the problem has the biggest impact. But percentage view can reveal UX problems that affect smaller populations.
+
+**Key point:** Percentage and absolute views tell different stories. For prioritization, use absolute — that's where the dollars are.
+
+**Say something like:**
+"Two ways to read a funnel, and they can tell different stories.
+
+Percentage view asks: which step has the worst conversion rate? If step 3 converts at 60% and step 4 at 85%, step 3 is the 'leakiest.'
+
+Absolute view asks: which step loses the most users in raw numbers? That depends on how many people reach each step.
+
+[Point to the example]
+
+5% drop from 100K users — you lose 5,000 people. 20% drop from 1K users — you lose 200 people. Percentage-wise, the 20% drop is worse. But for business impact? The 5% drop matters 25 times more.
+
+When you're prioritizing what to fix, use absolute view. That's where the revenue is. A 10% improvement to a step that sees 100K users beats a 50% improvement to a step that sees 1K users.
+
+Percentage view is still useful for diagnosis — a 50% drop-off is probably a broken UX, even if it's in a small segment."
+
+**Transition:** "Now let me show you where the real insights come from — segmentation..."
+-->
 
 ---
 
@@ -322,6 +373,34 @@ A: Start with the obvious ones: device, new/returning, traffic source. Then let 
 
 **Always validate data before analyzing.**
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Data quality issues are the most common source of funnel analysis failures. Students should understand that validating data comes BEFORE analysis. These five issues cover 90% of funnel data problems they'll encounter.
+
+**Key point:** Never trust funnel data without validation. Each issue has a diagnostic pattern and affects the funnel differently.
+
+**Say something like:**
+"Before you analyze any funnel, you need to validate the data. Let me walk through the five most common issues.
+
+Missing events — you look at your funnel and the numbers don't add up. More people complete checkout than start payment? That's impossible. Usually means the payment start event isn't firing. Compare event counts to page views as a sanity check.
+
+Duplicate events — the opposite problem. Someone refreshes a page and you count them twice. Look for identical user/timestamp combinations and dedupe.
+
+Bot traffic — inflates your top of funnel. You see tons of product views but nobody adds to cart. Check for patterns: same IP hitting hundreds of pages per second, data center IPs, no JavaScript execution.
+
+Cross-device — Maria starts on her phone, completes on her laptop. If you can't stitch those sessions together, she looks like two users: one who abandoned and one who magically converted without starting. Undercounts your conversion rate.
+
+Session stitching — related but different. Gaps in the journey that break your funnel logic. User goes from browse to purchase with nothing in between.
+
+The diagnostic: always validate before you analyze. Check event counts against page views. Look for duplicates. Check for bot patterns. Otherwise you'll recommend a UI fix when the real problem is measurement."
+
+**If asked:** "How do you catch these issues?"
+A: Sanity checks. Compare event counts to page views. Look for impossible sequences (more completions than starts). Check for data center IPs. Look for identical timestamps.
+
+**Transition:** "Now let's apply what we've learned to a real scenario..."
+-->
+
 ---
 
 ## The Quickcart Scenario
@@ -368,6 +447,32 @@ A: Great! That's a result. You eliminate one explanation and move to the next. H
 
 **Pre-mortem:** We identified payment step as problem, but events weren't firing on iOS 17. Recommended UI fix when real issue was measurement.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This slide connects the funnel analysis back to the Brief framework. The pre-mortem is crucial — it shows how data quality issues (the measurement problem from the previous slide) can lead to wrong recommendations. The blocker identification (mobile team lead) illustrates stakeholder management in a politically charged situation.
+
+**Key point:** The pre-mortem reveals the trap: recommending a UI fix when the real problem was measurement. Always validate data first.
+
+**Say something like:**
+"Let me walk through how this connects to your Brief.
+
+Primary metric is precisely defined: order_complete divided by checkout_start, measured per session, US users only. Notice the specificity — not just 'conversion rate' but exactly which events and which population.
+
+Counter-metrics show you're thinking beyond the primary goal. AOV is a tradeoff counter-metric — you could boost conversion by showing only cheap products, but that tanks AOV. Fraud rate and support tickets are guardrails — if your 'fix' introduces more fraud or confuses customers, you've made things worse.
+
+The blocker is the mobile team lead who owns the October UI launch. If your analysis points to their UI as the problem, they're going to push back hard. You need to anticipate that and have solid evidence.
+
+But here's the lesson — look at the pre-mortem. You identified the payment step as the problem, recommended a UI fix, but the real issue was that events weren't firing on iOS 17. It was a measurement problem, not a UI problem.
+
+This is why data validation comes first. This is why the pre-mortem exercise is so valuable — it forces you to imagine what could go wrong. If you had asked 'what if our event logging is broken?' you might have checked before recommending the wrong fix."
+
+**If asked:** "How do you handle the blocker situation?"
+A: Don't accuse their UI. Present the data objectively. If their UI is the problem, let the data speak. If it's a measurement issue, you've avoided a political fight entirely.
+
+**Transition:** "Let's summarize the key takeaways from funnel analysis..."
+-->
+
 ---
 
 ## Funnel Analysis: Key Takeaways
@@ -377,6 +482,31 @@ A: Great! That's a result. You eliminate one explanation and move to the next. H
 3. **Segment immediately** — the insight is in the segments
 4. **Validate data first** — logging gaps will mislead you
 5. **Counter-metrics matter** — conversion isn't the only goal (AOV, fraud)
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the summary slide for funnel analysis. Use it to reinforce the core lessons before moving to attribution. Students should remember these five points even if they forget the details.
+
+**Key point:** These five points are the essential takeaways from funnel analysis.
+
+**Say something like:**
+"Let me summarize funnel analysis with five key takeaways.
+
+One: Define stages with event names. Not 'checkout page' but 'checkout_start' event. Be precise.
+
+Two: Calculate both percentage AND absolute drops. A 5% drop from 1 million users is 50,000 lost customers. That matters.
+
+Three: Segment immediately. The overall funnel hides the story. Break it down by device, channel, user type.
+
+Four: Validate your data first. Missing events, duplicates, bot traffic — check for all of these before drawing conclusions.
+
+Five: Counter-metrics matter. Don't just optimize conversion. Watch AOV, fraud rate, support tickets.
+
+These five principles will serve you in any funnel analysis. Now let's move to attribution."
+
+**Transition:** "Now let's talk about a different problem: who gets credit for the sale?"
+-->
 
 ---
 
@@ -439,6 +569,34 @@ A **touchpoint** is any recorded marketing interaction:
 
 You need touchpoints joined to conversion events by user.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students need to understand the data substrate for attribution analysis. A touchpoint is any recorded marketing interaction — not just clicks, but impressions too. The key insight is that you need to link touchpoints to conversions, which requires user_id matching across systems.
+
+**Key point:** A touchpoint is any recorded marketing interaction. The challenge is linking touchpoints across platforms to the same user.
+
+**Say something like:**
+"A touchpoint is any marketing interaction we can record. Let me walk through the data you need.
+
+User_id — this is how you link touchpoints to conversions. It's also the hardest part. Different platforms have different identifiers. Your ad platform has one ID, your website has another, your CRM has another. Matching these is an entire discipline called identity resolution.
+
+Timestamp — you need to know when the touchpoint happened so you can sequence the journey. First touch, last touch, what happened in between.
+
+Channel — what marketing source. Paid search, paid social, email, organic, referral. This is what you're trying to attribute credit to.
+
+Campaign — more granular than channel. Within paid search, which campaign? Winter sale? Brand awareness? Retargeting?
+
+Action — what happened. A click is active engagement. An impression means they saw it but didn't click. Different models weight these differently.
+
+The key is joining this touchpoint table to your conversion table by user. That's how you answer 'what touchpoints did this customer see before converting?'"
+
+**If asked:** "How do you handle cross-device tracking?"
+A: It's hard. Probabilistic matching, login-based identity, device graphs. No perfect solution. This is why attribution data is always somewhat incomplete.
+
+**Transition:** "Let me show you what this data structure looks like..."
+-->
+
 ---
 
 ## The Data Structure
@@ -459,6 +617,32 @@ You need touchpoints joined to conversion events by user.
 
 **Join them** to see all touchpoints that preceded the conversion.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This slide shows the concrete data structure students will work with. The key operation is the JOIN — connecting touchpoints to conversions. Walk through the example: user u_123 saw a LinkedIn ad, clicked a Google ad, came back direct, and bought. The question becomes: which of these touchpoints gets credit?
+
+**Key point:** Attribution analysis starts with joining touchpoints to conversions. The result is a journey per converted user.
+
+**Say something like:**
+"Here's what the data looks like in practice.
+
+Top table is your touchpoint log. User u_123 saw a LinkedIn ad on January 1st — that's an impression, they saw it but didn't click. Then on January 5th they clicked a paid search ad. Then on January 8th they came back directly — maybe typed your URL, maybe had it bookmarked.
+
+Bottom table is your conversions. User u_123 bought something worth $150 on January 8th.
+
+Now you join these tables. For every conversion, you get all the touchpoints that preceded it. That's the journey: LinkedIn impression → paid search click → direct click → purchase.
+
+Who gets credit for this $150 sale? That's what attribution models answer.
+
+Note the complexity: the LinkedIn impression happened 7 days before purchase. Should that count? The direct visit was the last thing before buying — but did it really 'cause' the sale? These are the judgment calls that make attribution controversial."
+
+**If asked:** "What if there are no touchpoints before conversion?"
+A: That's 'organic' or 'unattributed.' Either they truly found you without marketing, or your tracking couldn't capture their journey. The latter is more common than you'd think.
+
+**Transition:** "This brings us to a critical question: how far back should we look?..."
+-->
+
 ---
 
 ## Attribution Windows
@@ -476,6 +660,33 @@ You need touchpoints joined to conversion events by user.
 
 Be explicit about your window choice.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Attribution windows are a major source of disagreement between marketing teams. Google and Meta default to different windows, which makes cross-channel comparison misleading. The choice of window is a judgment call that should match purchase cycle length. B2B with 90-day sales cycles needs 90-day windows; impulse e-commerce might need 7-day.
+
+**Key point:** The window changes the answer dramatically. Be explicit about your choice and why.
+
+**Say something like:**
+"Attribution windows are one of those technical details that have massive business implications.
+
+The question is: how far back do you look for touchpoints that 'count' toward a conversion?
+
+[Walk through table]
+
+7-day click is the default for many ad platforms. If someone clicked an ad and converted within 7 days, that ad gets credit. But what if your sales cycle is 30 days? That first touch from 3 weeks ago gets zero credit.
+
+For B2B with longer sales cycles, 30-day or even 90-day windows make more sense.
+
+View-through windows — 1-day view — are for when someone saw an ad but didn't click. Did that awareness contribute? Maybe. But a 7-day view window would attribute tons of conversions to display ads people barely noticed.
+
+Here's the key: the window changes the answer. If you use a 7-day window, awareness channels look terrible. If you use a 90-day window, awareness channels look much better. Neither is 'right' — but you need to choose consciously and document why.
+
+When you compare channels, make sure they're using the same window. Google's default is different from Meta's default — comparing them head-to-head is apples to oranges."
+
+**Transition:** "Let's look at the first attribution model..."
+-->
+
 ---
 
 ## Attribution Model: First-Touch
@@ -492,6 +703,29 @@ GROUP BY user_id
 
 **Bias:** Overvalues awareness channels (display, social, content)
 **Undervalues:** Conversion channels (search, retargeting)
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** First-touch attribution is the mirror image of last-touch. It credits whoever introduced the customer, ignoring who closed the deal. It's useful for understanding which channels build awareness and start customer journeys. The SQL is simple — MIN(timestamp) instead of MAX. Use first-touch when evaluating brand-building campaigns.
+
+**Key point:** First-touch answers "who started the journey?" It overvalues awareness and undervalues closers.
+
+**Say something like:**
+"First-touch is the opposite of last-touch. 100% credit to whoever first touched the customer within the attribution window.
+
+The SQL is simple: MIN timestamp instead of MAX.
+
+The bias is reversed. First-touch overvalues awareness channels — display ads, social, content marketing. These channels often start journeys but rarely close them. Under first-touch, they look great.
+
+It undervalues conversion channels — search, retargeting, branded terms. These channels close deals but often weren't first.
+
+When would you use first-touch? When you're evaluating brand-building campaigns. 'Is our podcast sponsorship starting new customer relationships?' First-touch would show you. Last-touch would show you nothing.
+
+Neither first nor last-touch is 'right.' They answer different questions. First-touch: who starts journeys? Last-touch: who closes deals? Most mature companies run both and look for differences."
+
+**Transition:** "Last-touch is more commonly used — let me show you why it's problematic..."
+-->
 
 ---
 
@@ -551,6 +785,30 @@ If user had 4 touchpoints before a $100 conversion:
 **Bias:** Treats all touchpoints as equal, ignores timing
 **Useful for:** Seeing full journey, identifying "assist" channels
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Linear attribution is the simplest "multi-touch" model. It acknowledges that multiple touchpoints contributed to the conversion, unlike single-touch models. However, it treats all touches as equally important, which is its main weakness. A LinkedIn ad impression 30 days ago gets the same credit as the search click that happened right before purchase.
+
+**Key point:** Linear is the simplest multi-touch model. It's egalitarian but ignores timing and engagement differences.
+
+**Say something like:**
+"Linear is the simplest way to spread credit across touchpoints. Everyone gets an equal share.
+
+If a user had four touchpoints before a $100 conversion, each channel gets $25. Simple, fair, democratic.
+
+The advantage? It acknowledges that multiple channels contributed. It surfaces 'assist' channels that never get credit under first or last touch.
+
+The disadvantage? A LinkedIn impression from 30 days ago gets the same credit as the search click that happened 10 minutes before purchase. Intuitively, that feels wrong. The recent touchpoint probably mattered more for this specific conversion.
+
+Linear is useful when you want to see the full picture — which channels are appearing in journeys at all? But for budget allocation, you probably want something that accounts for timing."
+
+**If asked:** "Is linear ever the best choice?"
+A: It's useful for discovery — seeing which channels appear in journeys. For budget allocation, time-decay or position-based are usually better because they account for recency.
+
+**Transition:** "Time-decay tries to fix the timing problem..."
+-->
+
 ---
 
 ## Attribution Model: Time-Decay
@@ -569,6 +827,30 @@ Common approach: Half-life decay (e.g., 7-day half-life)
 **Bias:** Still privileges closers, just less extremely than last-touch
 **Useful for:** Compromise between first and last touch
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Time-decay adds a recency dimension to multi-touch attribution. The half-life concept is from radioactive decay — the weight halves every N days. This addresses linear's main weakness (ignoring timing) while still giving some credit to earlier touchpoints. The 7-day half-life is common but arbitrary; adjust based on your sales cycle.
+
+**Key point:** Time-decay gives more credit to recent touchpoints but doesn't ignore earlier ones entirely. The half-life should match your sales cycle.
+
+**Say something like:**
+"Time-decay fixes linear's main problem: ignoring timing.
+
+The concept comes from radioactive decay — half-life. Every 7 days, the weight halves. A touchpoint on the day of conversion gets 100% weight. A touchpoint from 7 days ago gets 50%. 14 days ago gets 25%. And so on.
+
+So if you had a $100 conversion with two touchpoints — one same-day and one from 7 days ago — the same-day gets about 67% credit ($67), the older one gets 33% ($33). Not equal, but both count.
+
+The bias is clear: time-decay still privileges closers. It's softer than last-touch, but it's still saying 'recency matters.' That may or may not match your business reality.
+
+The half-life is arbitrary. 7 days is common, but if your sales cycle is 90 days, you might use 30-day half-life. The point is to match the decay to how long consideration typically takes in your business."
+
+**If asked:** "How do you pick the right half-life?"
+A: Match it to your sales cycle. If typical time from first touch to purchase is 30 days, use a 7-10 day half-life. If it's 7 days, use 2-3 days. There's no universally 'correct' answer.
+
+**Transition:** "The last model tries to capture both ends of the journey..."
+-->
+
 ---
 
 ## Attribution Model: Position-Based (U-Shaped)
@@ -584,6 +866,32 @@ Recognizes that:
 
 **Popular because it feels intuitively fair.**
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Position-based (also called U-shaped or bathtub) attribution tries to capture two important moments: awareness (first touch) and conversion (last touch). The 40/20/40 split is arbitrary but widely used. It satisfies both brand marketers (who value awareness) and performance marketers (who value conversion), which makes it politically viable.
+
+**Key point:** Position-based credits both ends of the journey. It's popular because it's a political compromise between awareness and performance marketing teams.
+
+**Say something like:**
+"Position-based is my personal favorite for most use cases. Let me explain why.
+
+It recognizes two critical moments in a customer journey. The first touch — who introduced this person to our brand? And the last touch — who closed the deal?
+
+Both matter. The LinkedIn ad that introduced someone to you 30 days ago is valuable — without it, they'd never have heard of you. The search ad they clicked right before buying is also valuable — it converted the interest into revenue.
+
+The middle touches? They helped nurture the relationship, but they're less decisive than the bookends.
+
+The 40/20/40 split is arbitrary. Some companies use 30/40/30 or other variations. The exact numbers matter less than the principle: credit both ends.
+
+Here's the real reason it's popular: it makes both brand marketers and performance marketers happy. Brand teams want credit for awareness. Performance teams want credit for conversions. Position-based says 'you're both important.' It's a political compromise that happens to be analytically reasonable."
+
+**If asked:** "Why not 50/0/50 and ignore the middle entirely?"
+A: Middle touches do matter — they keep the relationship warm. A user might have abandoned without that email reminder. 20% acknowledges their contribution without overweighting them.
+
+**Transition:** "Let's compare the output from these models..."
+-->
+
 ---
 
 ## Attribution Output: Touch-Based Models
@@ -596,6 +904,33 @@ Recognizes that:
 | Direct | $150K | $200K |
 
 Last-touch favors closers. First-touch favors awareness.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This table is the key "aha moment" for attribution. The same channels have wildly different attributed values depending on the model. LinkedIn: $80K last-touch vs $310K first-touch — that's a 4x difference! This is why attribution debates are so contentious: the model determines who looks good and who gets budget.
+
+**Key point:** Same data, different models, 4x different answers. The model choice is political, not just technical.
+
+**Say something like:**
+"This table is the most important one in the attribution section. Look at the differences.
+
+Paid Search: $450K under last-touch, $180K under first-touch. That's 2.5x difference.
+
+LinkedIn: $80K last-touch, $310K first-touch. That's a 4x difference!
+
+[Pause for effect]
+
+Same conversions. Same revenue. Same data. Completely different credit allocation.
+
+Now imagine you're the LinkedIn campaign manager and your performance review is based on attributed revenue. Under last-touch, you're at $80K — probably getting a budget cut. Under first-touch, you're at $310K — you're a hero.
+
+This is why attribution is political. The model choice determines who looks good. When someone advocates for a particular attribution model, ask yourself: does that model happen to favor their channel?
+
+The right answer is to present both. Look for the gaps. LinkedIn at $80K vs $310K is screaming 'investigate me!' That gap means LinkedIn is starting journeys but not closing them. Is that valuable? Depends on your strategy."
+
+**Transition:** "Distributed models try to be more balanced..."
+-->
 
 ---
 
@@ -613,6 +948,35 @@ Distributed models spread credit more evenly across the journey.
 
 **Look for channels where models disagree dramatically.** LinkedIn: $80K (last-touch) vs. $310K (first-touch). That's worth investigating.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This table shows linear and position-based results. Notice how much more consistent the numbers are compared to the previous slide — distributed models spread credit more evenly, which reduces the extreme swings between first-touch and last-touch. The key teaching point is the methodology: look for channels where models disagree dramatically.
+
+**Key point:** Distributed models are more stable than single-touch models. The action item is to investigate channels where models dramatically disagree.
+
+**Say something like:**
+"Now look at the distributed models. Much more consistent, right?
+
+Paid Search: $290K linear, $320K position-based. That's close.
+LinkedIn: $220K and $195K. Also pretty close.
+
+Compare this to the previous slide where LinkedIn was $80K vs $310K depending on the model. Distributed models smooth out those extremes.
+
+But here's the real insight — the action item isn't to pick one model and use it forever. The action item is to look for disagreement between models.
+
+When you compare all four models, LinkedIn jumps out: $80K last-touch, $310K first-touch, $220K linear, $195K position-based. That's telling you something. LinkedIn is starting journeys but not closing them.
+
+Is that valuable? If you're trying to grow awareness, absolutely. If you only care about immediate conversions, maybe not. But you need to know this pattern exists before you make budget decisions.
+
+The methodology: run multiple models, look for disagreement, investigate the outliers."
+
+**If asked:** "Which model should we report to leadership?"
+A: Report multiple models with the caveat that they measure different things. Or if forced to pick one, position-based is often a good default because it balances awareness and conversion.
+
+**Transition:** "Beyond credit allocation, let's look at actual paths customers take..."
+-->
+
 ---
 
 ## Path Analysis: Common Journeys
@@ -627,6 +991,34 @@ Beyond credit allocation, look at **paths**:
 
 **Insight:** Multi-touch journeys have higher value. LinkedIn often starts valuable journeys.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Path analysis moves beyond credit allocation to understanding customer journeys holistically. The insight that multi-touch journeys have higher average value is common — customers who engage more are more valuable. This justifies investment in awareness channels even when last-touch doesn't credit them.
+
+**Key point:** Multi-touch journeys are more valuable. Path analysis reveals the actual customer journey, not just credit allocation.
+
+**Say something like:**
+"Path analysis is different from attribution models. Instead of allocating credit, we're looking at actual customer journeys.
+
+[Point to table]
+
+Search → Direct: 1,240 conversions, $95 average value. These are people who searched, clicked, came back directly, and bought.
+
+LinkedIn → Content → Search: fewer conversions — 890 — but $180 average value. Almost double!
+
+Direct only: 2,100 conversions, but only $75 average value. These are people who just showed up and bought. Probably existing customers or word-of-mouth.
+
+What's the insight? Multi-touch journeys are more valuable. Customers who engage with multiple channels before converting spend more. This makes sense — they're doing research, they're more intentional.
+
+This has budget implications. If LinkedIn starts journeys that are worth 2x as much, cutting LinkedIn doesn't just reduce conversions — it reduces your highest-value conversions. The last-touch model completely misses this because it only credits who closed."
+
+**If asked:** "How many paths should we analyze?"
+A: Focus on the top 10-20 paths by volume or value. There's a long tail of rare paths that you can usually ignore.
+
+**Transition:** "Before we move on, let me warn you about data quality..."
+-->
+
 ---
 
 ## Data Quality Nightmares
@@ -637,6 +1029,32 @@ Beyond credit allocation, look at **paths**:
 - **UTM inconsistency** — Different teams → channels miscategorized
 
 Attribution is only as good as your tracking.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Data quality issues are often more impactful than model choice. You can run the most sophisticated attribution model, but if your data is broken, your results are wrong. These four issues affect virtually every attribution analysis — they're not edge cases, they're the norm.
+
+**Key point:** Attribution accuracy is capped by data quality. These issues are pervasive and often invisible unless you look for them.
+
+**Say something like:**
+"Let me be honest: data quality issues will affect every attribution analysis you ever do. These aren't edge cases — they're the norm.
+
+Cross-device: Someone researches on their phone during lunch, buys on their laptop that evening. If you can't link those sessions, you think a phone user abandoned and a laptop user converted with no prior touchpoints. Your journey data is just wrong.
+
+Cookie deletion: Privacy browsers, incognito mode, cookie clearing — all break your tracking. You might see 5 touchpoints in your data but the user actually had 10. The ones you missed? Gone forever.
+
+Walled gardens: Facebook and Google control their data. They'll tell you someone clicked an ad, but they won't give you the raw data to join with your other touchpoints. You're building a puzzle with missing pieces.
+
+UTM inconsistency: This is entirely self-inflicted. Marketing team uses utm_source=facebook, sales team uses utm_source=Facebook, product team uses utm_source=fb. Same channel, three different labels. Your attribution is now wrong because your data hygiene is broken.
+
+The implication: be humble about attribution results. They're directionally useful, not precisely accurate. And invest in data quality before investing in sophisticated models."
+
+**If asked:** "How much of the journey do we typically miss?"
+A: Varies, but 30-50% of touchpoints missing is common. Cross-device alone can cause 20%+ of users to appear as multiple people.
+
+**Transition:** "Let's apply this to a B2B scenario..."
+-->
 
 ---
 
@@ -685,6 +1103,34 @@ A: Often 90 days for enterprise sales, sometimes longer. The longer the window, 
 
 **Pre-mortem:** We cut Search to fund LinkedIn. Pipeline dropped 25%. Search was the "closer" for journeys LinkedIn started. We double-counted LinkedIn's influence.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This slide applies the Brief framework to the attribution scenario. Notice the counter-metrics are both guardrails — things that could break if you over-optimize on attributed revenue. The blocker is interesting: it's not about data or methodology, it's about a person's career being tied to a particular narrative.
+
+**Key point:** The pre-mortem reveals a subtle trap: reallocating from "closers" to "starters" can break the whole system because they work together.
+
+**Say something like:**
+"Let's look at the counter-metrics and stakeholders.
+
+Counter-metrics: Brand awareness is a guardrail — if you cut awareness channels, you might see immediate attribution look fine, but long-term you're killing the pipeline. Lead quality is another guardrail — you could get more leads that don't close.
+
+The blocker is fascinating. The Paid Search manager was recently promoted based on the 'Search drives ROI' narrative. If your analysis says 'actually, Search is just closing deals that other channels started,' you're threatening their career story. They're going to fight you.
+
+Now the pre-mortem: 'We cut Search to fund LinkedIn. Pipeline dropped 25%.'
+
+What happened? Search was the closer. LinkedIn was the starter. They work together. You can't just take money from closers and give it to starters — you need both. The channels aren't independent.
+
+This is the attribution trap: you see LinkedIn undervalued, so you fund more LinkedIn and cut Search. But LinkedIn starts journeys that Search closes. Cut Search, and those LinkedIn-started journeys have no closer. Pipeline drops.
+
+The lesson: channels interact. Test causally before making major budget shifts."
+
+**If asked:** "How do you handle the blocker?"
+A: Acknowledge their contribution explicitly. Position it as 'Search is essential for closing' not 'Search is overstated.' Same data, different framing.
+
+**Transition:** "Let's summarize attribution before moving to the next analysis..."
+-->
+
 ---
 
 ## Attribution: Key Takeaways
@@ -695,6 +1141,31 @@ A: Often 90 days for enterprise sales, sometimes longer. The longer the window, 
 4. **Path analysis reveals interactions** — channels don't work alone
 5. **Data quality limits everything** — cross-device and cookies kill accuracy
 6. **Validate with holdouts** — before major budget shifts, test causally
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This summary slide captures the essence of attribution analysis. Point 2 is the most important message — there's no objectively correct model, so the methodology is to compare models and investigate where they disagree.
+
+**Key point:** No attribution model is "right" — the methodology is comparative, not absolute.
+
+**Say something like:**
+"Six key takeaways from attribution.
+
+One: A touchpoint needs user_id, timestamp, and channel. All three. Without user_id you can't join to conversions. Without timestamp you can't sequence. Without channel you can't allocate.
+
+Two: No model is right. First-touch, last-touch, linear, position-based — they're all wrong in different ways. Present multiple, look for where they disagree dramatically. That's where the insight is.
+
+Three: Attribution windows matter. A 7-day window and a 30-day window give different answers. Be explicit about your choice and why.
+
+Four: Path analysis reveals interactions. Channels work together. LinkedIn starts journeys that Search closes. Don't analyze them in isolation.
+
+Five: Data quality limits everything. Cross-device, cookie deletion, walled gardens — all corrupt your data. Your attribution is only as good as your tracking.
+
+Six: Before you make major budget shifts based on attribution, validate with holdouts. Attribution is correlation. Holdouts give you causation."
+
+**Transition:** "Let's test your understanding with a quick exercise..."
+-->
 
 ---
 
@@ -715,6 +1186,40 @@ A: Often 90 days for enterprise sales, sometimes longer. The longer the window, 
 
 **Think (3 min):** Which analysis would you use first — Funnel or Channel Attribution? Why?
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This mini-case tests whether students can pick the right analysis for the situation. The two competing hypotheses (traffic quality vs. checkout bug) require different analyses to resolve. Funnel analysis with segmentation is the right first step — it can show whether the problem is concentrated in paid social traffic OR in mobile checkout across all channels.
+
+**Key point:** Funnel first, segmented. This untangles whether it's a traffic problem or a checkout problem.
+
+**Say something like:**
+"Take 3 minutes to think about this. Work with your neighbor.
+
+Two competing hypotheses. VP of Marketing blames traffic quality — the new campaign is bringing in people who were never going to convert. VP of Product blames the checkout — something's broken on mobile.
+
+Your job: which analysis do you use first? Funnel or Channel Attribution? And how would you use it to decide who's right?
+
+[Give them 3 minutes]
+
+[After 3 minutes, cold call]
+
+'[Name], what analysis would you start with?'"
+
+**The right answer:**
+Start with Funnel Analysis, segmented two ways:
+1. Segment by traffic source (paid social vs. other)
+2. Segment by device (mobile vs. desktop)
+
+If paid social has worse conversion at EVERY step (not just checkout), it's probably traffic quality.
+If mobile has worse conversion at the CHECKOUT step across ALL channels, it's probably a checkout bug.
+If ONLY paid social on mobile has the problem, it might be both — or there's an interaction to investigate.
+
+**Follow-up questions to ask:**
+- "What data would you need?"
+- "What if both VPs are partially right?"
+-->
+
 ---
 
 ## Mini-Case: Discussion
@@ -728,13 +1233,37 @@ A: Often 90 days for enterprise sales, sometimes longer. The longer the window, 
 
 <!--
 INSTRUCTOR NOTE:
-Cold call 2-3 students.
-Looking for:
-- Funnel Analysis FIRST: See if the drop is concentrated in specific steps
-- THEN segment by traffic source to see if paid social behaves differently
-- If mobile checkout drop-off is high across ALL channels, it's Product
-- If only paid social traffic abandons, it's the campaign quality
-- Need: user_id + timestamp + event_type + source + device
+
+**Background:** This is the discussion portion of the mini-case. Cold-call 2-3 students to get them thinking actively. The case tests whether they can apply both funnel analysis and attribution concepts, and more importantly, whether they can think about how analyses interact.
+
+**Key point:** The answer depends on segmentation. You need to analyze the funnel BY traffic source to untangle whether it's a product problem or a traffic quality problem.
+
+**Cold-call approach:**
+Pick a student: "[Name], let's start with you. How would funnel analysis help here?"
+
+**Looking for in answers:**
+1. Funnel Analysis: "Build a funnel of the checkout flow, see WHERE the drop-off is concentrated"
+2. Attribution: "Look at which channels are driving cart additions vs. which are abandoning"
+3. Both right: "Segment the funnel BY traffic source — if mobile checkout drops for ALL channels, it's Product. If only paid social abandons, it's campaign quality."
+4. Data needed: "user_id, timestamp, event_type (funnel events), source (channel), device"
+
+**Say something like:**
+"Let's discuss this. [Pick student] — how would funnel analysis help here?"
+
+[After their answer]
+
+"Good. Now here's the key question: what if BOTH the VP of Product AND VP of Marketing are partially right? How would you untangle that?"
+
+[Looking for: segment the funnel by traffic source]
+
+"Exactly. If you see mobile checkout drop-offs across ALL traffic sources, it's probably the checkout UX — a product problem. If you see high cart additions from paid social but then those specific users abandon at higher rates than other channels — it's traffic quality, a marketing problem.
+
+The data you need: user_id to link events, timestamp for sequencing, event_type for the funnel steps, source to segment by channel, and device to test the mobile hypothesis."
+
+**If no one gets it:**
+"Let me give you a hint. What happens if you build TWO funnels — one for paid social traffic only, one for all other traffic? What would different patterns tell you?"
+
+**Transition:** "Alright, let's take a quick break before we dive into some heavier statistical concepts..."
 -->
 
 ---
@@ -879,6 +1408,30 @@ Sales went up 12% during the campaign. But:
 
 **Correlation is easy. Causation is hard.**
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This slide crystallizes the causal inference problem in a business context. Students often assume that if sales went up during a campaign, the campaign worked. The list of alternative explanations (economy, competitor, holiday, new stores) should make them uncomfortable — all of these could explain the sales increase without the campaign doing anything.
+
+**Key point:** Many factors affect sales simultaneously. Without controlling for them, you cannot isolate the campaign's effect.
+
+**Say something like:**
+"Here's the fundamental question of campaign effectiveness: did the campaign cause the sales, or would they have happened anyway?
+
+Sales went up 12% during the campaign. The marketing team is celebrating. But look at these confounders:
+
+The economy improved — people have more money to spend. A competitor had a bad quarter — their loss was your gain. It was holiday season — people buy more during holidays anyway. New stores opened — more stores, more sales.
+
+Any of these could explain the 12% increase. Maybe ALL of them together explain it, and the campaign contributed nothing. Or maybe the campaign drove an additional 8% on top of what would have happened naturally.
+
+You cannot tell which is true just by looking at sales during vs. before the campaign. That comparison is correlation. To establish causation, you need to estimate what would have happened without the campaign and compare to that. That's hard."
+
+**If asked:** "So we can never know if marketing works?"
+A: You CAN know — with proper experimental design. Holdout tests, geo-experiments, synthetic controls. But you have to do the work. The naive 'sales went up' comparison tells you almost nothing.
+
+**Transition:** "Let me show you a real scenario where this matters..."
+-->
+
 ---
 
 ## Why This Matters
@@ -890,6 +1443,32 @@ Sales went up 12% during the campaign. But:
 **CFO asks:** "Would sales have been up $30M anyway due to new stores and economy? So marketing only drove $15M — less than 1x ROI."
 
 **Who's right?** You need to estimate the **counterfactual** — what would have happened without the campaign.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This CMO vs CFO scenario is a common real-world tension. CMOs often claim full credit for sales increases (correlation), while CFOs question how much was truly incremental (causation). The gap between $45M and $15M is the difference between a successful campaign and a budget cut. This frames why counterfactual estimation matters.
+
+**Key point:** The difference between CMO's claim and CFO's skepticism is the counterfactual. This isn't an academic debate — it's budget on the line.
+
+**Say something like:**
+"Let me make this concrete with a scenario that happens in companies every quarter.
+
+You're the analyst. The CMO shows you this slide at the year-end review. 'We spent $18M on holiday marketing. Sales were up $45M. That's 2.5x ROI! Marketing is killing it! Give me more budget!'
+
+The CFO is skeptical. 'Hold on. We opened 50 new stores this year. The economy was strong. Competitors had supply chain issues. Would sales have been up anyway? If sales would have been up $30M without marketing, then marketing only drove $15M — and $15M from $18M spend is less than 1x ROI. We should cut the budget.'
+
+[Pause]
+
+Who's right? You literally cannot answer this question without estimating the counterfactual. What would sales have been if we hadn't run the campaign?
+
+That's the fundamental question of campaign effectiveness. And it determines whether marketing gets more budget or gets cut. The stakes are real."
+
+**If asked:** "Can't we just run without marketing for a quarter and see?"
+A: That's actually the best answer — a holdout test. But it requires planning ahead, and CFOs are often reluctant to leave money on the table. We'll cover how to set these up.
+
+**Transition:** "Let me visualize what a counterfactual looks like..."
+-->
 
 ---
 
@@ -905,6 +1484,30 @@ Sales went up 12% during the campaign. But:
 You can never directly observe what would have happened if you hadn't run the campaign.
 
 You have to **estimate** the counterfactual using control groups or statistical models.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the philosophical core of the problem. The counterfactual is fundamentally unobservable — you cannot see what would have happened in a parallel universe. All of our methods (holdout tests, geo-matching, synthetic control) are ways of ESTIMATING the counterfactual, not observing it directly. This epistemological point matters because it means all causal estimates have uncertainty.
+
+**Key point:** The counterfactual is unobservable. Every causal estimate is an approximation with uncertainty.
+
+**Say something like:**
+"Let me be philosophically precise for a moment. The counterfactual is fundamentally unobservable.
+
+You ran the campaign in all markets. What would have happened if you hadn't? You can never directly observe that world — it doesn't exist. There's no way to rewind time, not run the campaign, and see what happens.
+
+So every method we use — holdout tests, geo-matching, synthetic control — is trying to ESTIMATE what that unobservable counterfactual would have been. We're not measuring it. We're approximating it.
+
+This matters because it means every causal estimate comes with uncertainty. Even the best randomized holdout test gives you an estimate plus or minus some confidence interval. The further you get from randomization, the more uncertainty you have.
+
+When someone says 'the campaign drove $15M,' the honest way to say it is 'our best estimate of the incremental effect is $15M, with a 95% confidence interval of $10M to $20M.' That's less punchy in a presentation, but it's accurate."
+
+**If asked:** "If we can never know for sure, why bother?"
+A: Because imperfect estimates are infinitely better than no estimates. The alternative is claiming credit for everything (CMO) or nothing (CFO) — both are wrong. Causal inference gives you a principled middle ground.
+
+**Transition:** "Let me show you the gold standard method..."
+-->
 
 ---
 
@@ -924,6 +1527,32 @@ Incremental Effect = Treatment Sales - Control Sales
 
 **Why it works:** Random assignment ensures groups are comparable. Any difference is caused by the campaign.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Randomized holdout tests are the gold standard for causal inference in marketing. By randomly assigning some markets to receive no campaign, you create a true control group. Any difference between treatment and control is caused by the campaign — not confounders. The challenge is convincing stakeholders to "leave money on the table" by not marketing to 10% of markets.
+
+**Key point:** Randomization is gold standard because it eliminates confounders. The cost is leaving some markets untreated.
+
+**Say something like:**
+"Randomized holdout is the gold standard. If you can do it, do it.
+
+Before the campaign launches, randomly select some markets — say 10% — to NOT see any campaign ads. These are your 'holdout' or control markets. The other 90% get the full campaign.
+
+After the campaign, compare sales. Treatment markets minus control markets equals your incremental effect. Simple.
+
+Why does this work? Random assignment. Because you assigned randomly, any difference you see can't be explained by 'well, those markets are different.' They're not systematically different — you made sure of that by randomizing.
+
+The challenge: you have to plan ahead. If the campaign already ran everywhere, it's too late. And stakeholders hate holdouts — 'You want me to NOT market to 10% of my customers? That's money on the table!'
+
+Your job is to help them see that without a holdout, they'll never know if the campaign worked at all. Better to prove 90% of spend works than to spend 100% and hope."
+
+**If asked:** "How many markets should we hold out?"
+A: Depends on power calculations, but typically 10-20%. Larger holdout = more precision but more 'lost' revenue. Run a power analysis to size it properly.
+
+**Transition:** "When you can't randomize, here's your next best option..."
+-->
+
 ---
 
 ## Method 2: Geo-Matched Markets
@@ -939,6 +1568,30 @@ When you can't randomize, find markets that **look similar** before the campaign
 
 **Risk:** "Similar" markets may differ in unobserved ways.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Geo-matching is the most common approach when holdouts weren't planned. You find markets with similar pre-campaign trends and use one as control. The danger is that "similar on observables" doesn't guarantee "similar on unobservables." Phoenix and Tucson might have different economic conditions, competitive landscapes, or customer demographics that you can't see in the data.
+
+**Key point:** Geo-matching assumes that markets similar on observables will behave similarly. This assumption can be wrong.
+
+**Say something like:**
+"When you didn't plan a holdout — and this is the common case — geo-matching is your next option.
+
+The idea: find markets that looked similar before the campaign. Phoenix and Tucson both grew about 5% year-over-year. Phoenix got heavy campaign spend, Tucson got none. If Phoenix grows 15% during the campaign while Tucson grows 5%, maybe the campaign drove that extra 10%.
+
+The logic is reasonable. But here's the risk: 'similar' on the things you can measure doesn't mean similar on things you can't measure.
+
+Maybe Phoenix has a new tech company that just opened an office there — you don't know that, but it's driving growth. Maybe Tucson's main employer just announced layoffs. These unobserved factors will confound your estimate.
+
+Geo-matching is better than nothing, but always acknowledge the assumption. Your estimate is valid IF similar pre-trends mean similar counterfactual trends. That's a big IF."
+
+**If asked:** "How do I pick good matched markets?"
+A: Match on as many observables as you can — growth rate, demographics, store count, competitive landscape. The more similar on observables, the more plausible that unobservables are also similar.
+
+**Transition:** "When no single market is a good match, there's a more sophisticated option..."
+-->
+
 ---
 
 ## Method 3: Synthetic Control
@@ -952,6 +1605,30 @@ Algorithm finds weights: Phoenix ≈ 0.4×Denver + 0.3×Austin + 0.2×Portland +
 The weighted combination matches Phoenix's pre-campaign trend.
 
 **Post-campaign:** Compare Phoenix to the synthetic Phoenix.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Synthetic control is a sophisticated method from econometrics (Abadie, Diamond, Hainmueller 2010). When no single market is a good control, you create a weighted combination of markets that together replicate the treated market's pre-treatment trajectory. This is powerful but requires good pre-period data and statistical expertise.
+
+**Key point:** When no single control works, create a weighted combination that matches pre-campaign trends. The method is powerful but requires expertise and good data.
+
+**Say something like:**
+"What if no single market is a good match for Phoenix? Tucson is smaller, Denver has different weather, Austin has different demographics. None of them alone are good controls.
+
+Synthetic control solves this. Instead of picking one control market, you create a 'synthetic Phoenix' from a weighted combination of multiple markets.
+
+The algorithm finds weights that make the synthetic Phoenix track real Phoenix as closely as possible BEFORE the campaign. Maybe 40% Denver, 30% Austin, 20% Portland, 10% Salt Lake together look like Phoenix.
+
+If the synthetic Phoenix tracks real Phoenix well before the campaign, you have a credible counterfactual. After the campaign, the gap between real and synthetic Phoenix is your causal estimate.
+
+This is more sophisticated than simple geo-matching. It's been used to estimate the effects of policies — California smoking regulations, German reunification, Brexit. But it requires solid pre-period data and statistical expertise to implement properly."
+
+**If asked:** "What software implements this?"
+A: Python's CausalPy or R's Synth package. Google also has open-source implementations. It's not plug-and-play — you need to understand the assumptions.
+
+**Transition:** "Let me show you what the output looks like..."
+-->
 
 ---
 
@@ -980,6 +1657,34 @@ The gap after = causal effect estimate.
 
 **Key requirement:** You need variation in spend across markets. If all markets got the same campaign, you can't estimate incrementality.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students need to understand what data infrastructure is required for campaign effectiveness analysis. The key insight is variation — you need some markets to have been treated differently than others. If everyone got the same campaign, there's no control to compare to. This is why planning matters.
+
+**Key point:** You need variation in spend across markets. Same campaign everywhere = no control = no causal estimate.
+
+**Say something like:**
+"Let me tell you what data you need to do this analysis properly.
+
+Sales by market and time — this is your outcome. You need it at a granular level so you can see weekly or daily changes.
+
+Marketing spend by market and time — this is your treatment variable. You need to know which markets got how much campaign exposure.
+
+Pre-period trend — 6-12 months before the campaign. This is what you use to match markets or build synthetic controls. Without good pre-period data, you can't assess whether your controls are valid.
+
+Market characteristics — demographics, store count, competitive landscape. These help you match more precisely and check for confounders.
+
+But here's the critical requirement: you need VARIATION in spend. If all 50 markets got the exact same campaign with the same intensity, you have no control. Everyone was treated the same. You cannot estimate incrementality.
+
+This is why the holdout matters. If you planned ahead and held out 10%, you have variation. If you ran the same campaign everywhere, you're stuck with year-over-year comparisons and their limitations."
+
+**If asked:** "What if we always run the same campaign everywhere?"
+A: Push for holdouts going forward. For past campaigns, you're limited to time-based comparisons (before/after, year-over-year) which have more confounders.
+
+**Transition:** "Now let me show you how to interpret the results..."
+-->
+
 ---
 
 ## Interpreting Results
@@ -996,6 +1701,36 @@ Output looks like:
 
 If CI includes 1x (or below), you can't confidently say campaign was profitable.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Confidence intervals are crucial for campaign effectiveness because they capture uncertainty. A point estimate of 2.3x ROI sounds great, but if the CI is 1.6x to 3.1x, you still might have lost money at the lower bound. Many executives only want to see the point estimate; your job is to insist on intervals.
+
+**Key point:** Always report confidence intervals. A point estimate without uncertainty is a lie of omission.
+
+**Say something like:**
+"Let me show you how to read and present campaign effectiveness results.
+
+[Point to table]
+
+Point estimate: $42M incremental revenue, $18M spend, 2.3x ROI. Sounds great!
+
+But look at the confidence interval: $28M to $56M. The 95% CI for ROI is 1.6x to 3.1x.
+
+Why does this matter? At the lower bound — 1.6x — the campaign is still profitable but barely. At 2.3x it's clearly profitable. At 3.1x it's fantastic. You don't know which is true.
+
+Here's the rule: if the CI includes 1x or below, you can't confidently say the campaign was profitable. The uncertainty is too large.
+
+Many executives will want you to just show them the point estimate. 'Just tell me the ROI.' Your job is to push back. 'The ROI is 2.3x, but the uncertainty ranges from 1.6x to 3.1x. We're confident it was profitable, but the magnitude is uncertain.'
+
+Point estimates without confidence intervals are a form of dishonesty. They make you look more certain than you are."
+
+**If asked:** "How do I get tighter confidence intervals?"
+A: More data (longer campaign, more markets) or better experimental design. The holdout size matters — bigger holdouts give more precision.
+
+**Transition:** "Now let me warn you about common pitfalls..."
+-->
+
 ---
 
 ## Common Pitfalls
@@ -1004,6 +1739,32 @@ If CI includes 1x (or below), you can't confidently say campaign was profitable.
 - **Selection bias** — Best markets get campaign → randomize or match
 - **Pull-forward** — Sales spike then drop → measure full period
 - **Competitor confound** — Competitor enters control → validate matching
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** These four pitfalls represent the most common ways campaign effectiveness analyses go wrong. Each has a specific diagnostic and fix. Control contamination is especially common with digital advertising where targeting isn't perfectly geographic.
+
+**Key point:** Each pitfall can invalidate your causal estimate. Know how to detect and prevent each one.
+
+**Say something like:**
+"Let me walk you through the four ways these analyses most commonly fail.
+
+Control contamination: Your 'control' markets still saw the ads. This happens with digital advertising — someone from your control market visits a treatment market and sees the campaign on their phone. Now they're contaminated. The fix: use geographic buffers, analyze at larger regional levels, or use platform-level targeting that's more precise.
+
+Selection bias: The best markets got the campaign, underperforming markets were 'held out.' Now your treated markets outperform for reasons that have nothing to do with the campaign — they were already better. The fix: randomize or match carefully on pre-period trends.
+
+Pull-forward: The campaign spiked sales during the campaign period, but it was just pulling forward purchases that would have happened anyway. Post-campaign sales drop, and net effect is zero. The fix: measure the full period including post-campaign to see if gains persist.
+
+Competitor confound: A competitor launches a big promotion in your control markets during the campaign period. Now your control looks worse, making your treatment look better. The fix: validate that nothing unusual happened in control markets during the test.
+
+Each of these can completely invalidate your estimate if you don't catch them."
+
+**If asked:** "How do I check for control contamination?"
+A: Look at advertising platform data for reach in control markets. If it's not near zero, you have contamination. Also survey control market customers about brand awareness.
+
+**Transition:** "Let me show you one of these pitfalls in detail..."
+-->
 
 ---
 
@@ -1059,6 +1820,32 @@ A: Depends on purchase frequency. For consumer goods bought monthly, measure at 
 - CMO: Advocate (budget depends on proving effectiveness)
 - Agency: Worried (low ROI threatens $5M contract)
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This scenario explicitly calls out the stakeholder dynamics that make campaign effectiveness politically charged. The CFO was burned before (distrust), the CMO's budget is on the line (high stakes), and the agency has a $5M contract at risk (external blocker). The analysis isn't just technical — it's navigating these competing interests.
+
+**Key point:** Campaign effectiveness analysis exists in a politically charged environment. Every stakeholder has incentives that affect how they'll receive your findings.
+
+**Say something like:**
+"Notice the stakeholder complexity here. This isn't a clean analytical problem — it's a political minefield.
+
+The CFO is skeptical. They've been burned before by marketing claiming credit for things that would have happened anyway. They're going to scrutinize your methodology.
+
+The CMO is an advocate — but not objectively. Their budget for next year depends on proving this year's spend was effective. They WANT you to find high ROI.
+
+And the agency has $5M at risk. If you find low ROI, their contract could get cut. They're going to push back on any analysis that makes them look bad.
+
+So you're the analyst. Who do you please? The answer: none of them. You please the truth. But you need to anticipate these dynamics and have bulletproof methodology. When the CFO attacks your controls, you need to be ready. When the agency questions your data sources, you need to be ready.
+
+This is why we spend so much time on methodology. In a politically charged environment, rigorous methods are your shield."
+
+**If asked:** "How do you handle conflicting stakeholders?"
+A: Be transparent about methodology, present uncertainty honestly, and let the data speak. Don't shade results for any stakeholder. Your credibility depends on being objective.
+
+**Transition:** "Let's see what can go wrong in the pre-mortem..."
+-->
+
 ---
 
 ## BrightMart: Pre-Mortem
@@ -1071,6 +1858,32 @@ A: Depends on purchase frequency. For consumer goods bought monthly, measure at 
 >
 > **Lesson:** Validate control market selection rigorously before running analysis.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This pre-mortem illustrates the "competitor confound" pitfall in action. The control markets looked fine on historical data, but something changed during the test period. The entry of ValueMart into control markets depressed their sales, making the treatment markets look artificially good by comparison.
+
+**Key point:** Control market validation isn't just about the past — you need to verify nothing changed during the test period itself.
+
+**Say something like:**
+"Let's walk through this pre-mortem. You proved 2.8x ROI — that's fantastic. The CMO is thrilled. Budget secured. Everyone's happy.
+
+But the CFO's team does their own analysis. They discover something: ValueMart — a new competitor — entered your control markets during the campaign period.
+
+What does that mean? Your control markets' sales dropped — not because they weren't getting your campaign, but because a new competitor was stealing market share. Your treatment markets look great by comparison, but it's not because your campaign was amazing. It's because your controls got worse for external reasons.
+
+When you re-run the analysis excluding contaminated controls, ROI drops from 2.8x to 1.4x. Still positive, still justifiable, but a very different story.
+
+The lesson: control market validation isn't just about historical similarity. You need to verify that nothing unusual happened to your controls DURING the test. New competitors, weather events, local economic shifts — any of these can confound your results.
+
+Check during-period control validity, not just pre-period matching."
+
+**If asked:** "How would you catch this before presenting?"
+A: Monitor news, check for unusual sales patterns in control markets, look for explanatory variables beyond your campaign. Treat it like a scientific experiment where you're looking for confounds.
+
+**Transition:** "Let's summarize what we've learned about campaign effectiveness..."
+-->
+
 ---
 
 ## Campaign Effectiveness: Key Takeaways
@@ -1081,6 +1894,31 @@ A: Depends on purchase frequency. For consumer goods bought monthly, measure at 
 4. **Synthetic control for observational** — when you can't randomize
 5. **Check for pull-forward** — measure beyond campaign period
 6. **Report confidence intervals** — point estimates alone are misleading
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This summary captures the essence of campaign effectiveness analysis. The first point is the most important philosophical shift — students often conflate correlation with causation. The remaining points are practical guidance for doing the analysis correctly.
+
+**Key point:** The fundamental lesson is that correlation isn't causation. Everything else follows from taking that seriously.
+
+**Say something like:**
+"Six takeaways from campaign effectiveness.
+
+One: Correlation is not causation. This is the foundation. 'Sales went up during the campaign' tells you almost nothing about whether the campaign worked.
+
+Two: You need a counterfactual. The question isn't 'what happened?' but 'what would have happened WITHOUT the campaign?' That's the comparison that matters.
+
+Three: Randomized holdouts are gold standard. If you can plan ahead, hold out some markets. Random assignment eliminates confounders.
+
+Four: When you can't randomize, synthetic control is your best observational method. Build a weighted control from multiple markets.
+
+Five: Check for pull-forward. The campaign might spike sales during the campaign period, but those sales might have happened anyway in the next month. Measure beyond the campaign period.
+
+Six: Report confidence intervals. A point estimate of 2.3x ROI sounds great. But if the CI is 0.8x to 3.8x, you don't actually know if the campaign was profitable. Uncertainty matters."
+
+**Transition:** "Now let's talk about the fundamental question of unit economics..."
+-->
 
 ---
 
@@ -1142,6 +1980,38 @@ A: Depends on the business. SaaS benchmarks are 3:1 or higher. E-commerce is oft
 **Payback** = CAC / Monthly Revenue → Months to recover
 
 **Benchmarks:** SaaS > 3:1, E-commerce > 2:1
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** These four definitions are the foundation of unit economics. CAC and LTV are the two core numbers; LTV:CAC ratio and payback period are derived metrics that investors and CFOs care about. The benchmarks (3:1 for SaaS, 2:1 for e-commerce) are rough guidelines — actual targets depend on business model, growth stage, and competition.
+
+**Key point:** Four definitions to memorize. CAC and LTV are the inputs; LTV:CAC ratio and payback are the derived outputs.
+
+**Say something like:**
+"Let me give you four definitions you'll use for the rest of your career.
+
+CAC — Customer Acquisition Cost. Total money spent acquiring customers divided by number of customers acquired. How much you pay per customer.
+
+LTV — Lifetime Value. Revenue times margin times customer lifespan. How much a customer is worth to you.
+
+LTV:CAC ratio — LTV divided by CAC. This is the profitability ratio. If it's above 1, you make money. Below 1, you lose money.
+
+Payback — CAC divided by monthly revenue. How many months until you recover the cost of acquiring a customer.
+
+[Point to benchmarks]
+
+For SaaS, you want LTV:CAC above 3:1. For e-commerce, above 2:1 is often acceptable because transactions are more frequent.
+
+Why is SaaS higher? Because SaaS has high upfront costs and subscription revenue comes in slowly. You need more cushion. E-commerce gets cash faster.
+
+These are rough benchmarks. Your actual target depends on your competition, your growth stage, and your margin structure."
+
+**If asked:** "What if we're a startup with no historical data for LTV?"
+A: You'll need to project based on early cohort data or industry benchmarks. Be conservative and explicit about assumptions.
+
+**Transition:** "Let me show you how to calculate CAC properly — most companies get it wrong..."
+-->
 
 ---
 
@@ -1205,6 +2075,41 @@ Break down by acquisition source:
 
 **Insight:** Organic and referral are 3-4x more efficient than paid.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Channel-level CAC is essential for budget allocation. This example shows the common pattern: organic and referral have much lower CAC than paid channels. However, the caveat matters — we're only seeing CAC, not LTV. Cheap customers aren't always valuable customers. And channels aren't independent, as we'll see.
+
+**Key point:** Break down CAC by channel. The aggregate hides important variation. But don't optimize on CAC alone — LTV matters too.
+
+**Say something like:**
+"Now let's break CAC down by channel. This is where it gets interesting.
+
+[Walk through the table]
+
+Paid Social: $300K spent, 400 customers, $750 CAC. Expensive.
+
+Paid Search: $400K spent, 800 customers, $500 CAC. Better.
+
+Organic/SEO: $100K — and notice the asterisk, that's content team salaries — 600 customers, $167 CAC.
+
+Referral: $50K program cost, 300 customers, $167 CAC.
+
+[Pause]
+
+The insight jumps out: organic and referral are 3-4x more efficient than paid. $167 vs $500-750.
+
+Now here's where executives get into trouble. They see this table and say: 'Let's cut paid and put everything into organic and referral!'
+
+That's naive for two reasons. One: CAC isn't the whole picture. What if paid social customers have higher LTV? We'll look at that next.
+
+Two: channels aren't independent. What if paid social is how people first hear about you, and then they come back organically later? Cutting paid might kill organic.
+
+For now, just note: break down CAC by channel. The aggregate lies to you."
+
+**Transition:** "Let me show you how LTV changes this picture..."
+-->
+
 ---
 
 ## Calculating LTV: The Projection Problem
@@ -1220,6 +2125,36 @@ LTV = ARPU × Gross Margin × Customer Lifespan
 ```
 
 **Example:** $50/month × 70% margin × 24 months = **$840**
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** LTV calculation is fundamentally a projection problem — you're predicting the future. The simple formula is useful for back-of-envelope calculations but hides significant uncertainty. The three components (retention, revenue, margin) all require predictions.
+
+**Key point:** LTV is a prediction, not a measurement. Every component involves uncertainty.
+
+**Say something like:**
+"LTV requires predicting the future. Let me break down the three components.
+
+How long will they stay? That's retention. You have to predict when they'll churn.
+
+What will they spend? That's revenue over time. Will they upgrade? Downgrade? Buy add-ons?
+
+What's your margin? That's profitability. Not just revenue, but what you keep after costs.
+
+The simple formula multiplies these together: ARPU times gross margin times customer lifespan.
+
+Let's work an example. $50 per month average revenue. 70% gross margin — meaning you keep $35 after direct costs. Customer stays for 24 months on average. 50 times 70% times 24 equals $840 LTV.
+
+But here's the catch: every one of those numbers is a prediction. Maybe retention declines. Maybe pricing changes. Maybe costs increase. The $840 is a point estimate with uncertainty around it.
+
+When you present LTV, always acknowledge the uncertainty. 'Our LTV estimate is $840, but it could range from $700 to $1000 depending on retention trends.'"
+
+**If asked:** "Should we use simple formulas or cohort analysis?"
+A: Cohort analysis is more accurate but requires more data and patience. Simple formulas are good for quick estimates and sanity checks. Use both.
+
+**Transition:** "Let me show you a more accurate approach using cohorts..."
+-->
 
 ---
 
@@ -1288,6 +2223,30 @@ The further you project, the more uncertain the estimate.
 
 These channels are highly profitable. Low cost, high retention.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This slide shows what "good" channel economics look like. These numbers are realistic for subscription businesses — organic and referral typically have the best unit economics because customer acquisition cost is minimal. Students should internalize what healthy LTV:CAC ratios look like (3x+ is typically the benchmark).
+
+**Key point:** Organic and referral channels usually have the best economics because CAC is so low, not because LTV is exceptionally high.
+
+**Say something like:**
+"Look at these numbers. Organic and referral have LTV:CAC ratios of 5x and 5.5x. These are excellent — above the 3x benchmark we typically target.
+
+But notice something interesting. Their LTV isn't dramatically higher — $840 and $920. What makes them 'winners' is the CAC is so low — just $167. That's because you're not paying for ads to acquire these customers.
+
+Organic means they found you through search or word of mouth. Referral means existing customers brought them in. In both cases, your main cost is just the operational cost of processing the signup, maybe a small referral bonus.
+
+The payback period is also short — 2-3 months. That means you recoup your acquisition cost quickly and the rest is profit.
+
+Every company dreams of channels like this. But here's the catch — they're usually not scalable. You can't just 'buy more organic traffic.' You have to earn it through content, SEO, product quality. So while these are the best channels, they're often not the ones you can grow on demand."
+
+**If asked:** "What's a good LTV:CAC benchmark?"
+A: 3x is the common benchmark for healthy SaaS/subscription businesses. Below 3x and you're spending too much to acquire customers. Above 5x means you might be under-investing in growth.
+
+**Transition:** "Now let's look at the other end of the spectrum..."
+-->
+
 ---
 
 ## Channel Economics: The Losers
@@ -1300,6 +2259,34 @@ These channels are highly profitable. Low cost, high retention.
 Paid social is underwater (LTV < CAC over 12 months).
 
 **But wait...** Are channels independent?
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This slide sets up the channel interaction problem that follows. On paper, these channels look like clear candidates for cutting — especially paid social with a 0.9x LTV:CAC (losing money on every customer). The payback periods are also concerning. But the slide ends with a provocative question that should make students pause.
+
+**Key point:** Don't rush to judgment. Channels that look bad in isolation may be serving a purpose the attribution system can't see.
+
+**Say something like:**
+"Now look at paid channels. Paid search is at 1.6x — below our 3x benchmark but at least profitable. But paid social? 0.9x. For every dollar we spend, we get back 90 cents. We're literally losing money on every customer we acquire.
+
+The payback period is 14 months — which means it takes over a year to recoup the acquisition cost. For a subscription business that's concerning. A lot can go wrong in 14 months.
+
+If you showed this table to a CFO, what would they say? 'Cut paid social. It's destroying value.'
+
+And that's exactly what many companies do. They run this analysis, see the bad unit economics, and cut the underperforming channels.
+
+But here's where I want you to pause. Look at that last line: 'Are channels independent?'
+
+What if paid social isn't really about direct conversions? What if it's building brand awareness that drives organic and referral? What if cutting it tanks your overall growth even though its direct economics look bad?
+
+This is the trap. Let me show you what happens when companies fall into it..."
+
+**If asked:** "At what point should you cut a channel?"
+A: Only after you've tested whether cutting it affects OTHER channels. Run a holdout test first — turn it off in some markets and measure total outcomes, not just that channel's attributed conversions.
+
+**Transition:** "Let me show you why those last two lines matter so much..."
+-->
 
 ---
 
@@ -1357,6 +2344,32 @@ A: Holdout tests or market experiments. Turn off a channel in some geos and meas
 
 **Blocker:** Paid acquisition team — if paid social looks bad, team of 4 becomes team of 2. Jobs literally on the line.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This scenario explicitly names the human stakes — a team of 4 becoming a team of 2 means layoffs. This is the most politically charged blocker we've discussed. The analysis isn't just about data; it's about people's jobs.
+
+**Key point:** When your analysis threatens jobs, expect fierce resistance. This doesn't mean you change your analysis — it means you anticipate the pushback and have solid methodology.
+
+**Say something like:**
+"Look at the blocker here. If paid social looks bad, a team of 4 becomes a team of 2. That's not abstract — that's layoffs. Jobs on the line.
+
+When you're the analyst presenting this, expect resistance. The paid acquisition team will question your methodology. They'll find edge cases. They'll argue the data is incomplete.
+
+Some of this is legitimate. Maybe your data IS incomplete. Maybe there ARE edge cases you haven't considered.
+
+But some of it is motivated reasoning. They don't want to lose their jobs. That's human and understandable.
+
+Your job is to be rigorous AND empathetic. Rigorous: make sure your methodology is bulletproof before you present. Empathetic: acknowledge the human stakes and present the data as 'here's what we found and what we recommend' not 'here's why you should be fired.'
+
+The goal is to find the truth and make good decisions for the company — not to 'win' against a team."
+
+**If asked:** "How do you handle it when your analysis threatens someone's job?"
+A: Present facts, not accusations. Recommend decisions about channels, not people. Let leadership make personnel decisions. And make sure your analysis is solid — you owe that to everyone.
+
+**Transition:** "Let's see what went wrong in the pre-mortem..."
+-->
+
 ---
 
 ## MindfulApp: Pre-Mortem
@@ -1369,6 +2382,32 @@ A: Holdout tests or market experiments. Turn off a channel in some geos and meas
 >
 > **Lesson:** Run holdout tests before major channel cuts to understand interactions.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the canonical "channel interaction" failure. The direct LTV:CAC for paid social was low (1.5x), so cutting seemed rational. But paid social was driving awareness that fed organic and referral. When awareness dropped, those "cheap" channels dried up.
+
+**Key point:** Channels aren't independent. The "awareness tax" from paid channels can't be measured with attribution — you need experiments.
+
+**Say something like:**
+"This pre-mortem is the culmination of everything we've discussed about channel interactions.
+
+The analysis was correct: paid social's direct LTV:CAC was 1.5x — below the 3x benchmark. The recommendation seemed obvious: cut 60% of spend.
+
+Growth slowed from 40% to 15%.
+
+What went wrong? Paid social wasn't just acquiring customers directly. It was building awareness. When people see your ads, they don't always click immediately. But later, when they're ready to meditate, they remember 'MindfulApp' and search for it — organic. Or they recommend it to a friend — referral.
+
+Those organic and referral channels looked great on paper — 5x+ LTV:CAC! But they were being fed by paid social. Cut the awareness engine, and the 'cheap' channels dry up.
+
+This is why I keep saying: run holdout tests before major channel cuts. Turn off paid social in some markets and measure TOTAL growth, not just paid social's attributed conversions. If overall growth drops, you know paid social is feeding other channels."
+
+**If asked:** "How would you have avoided this?"
+A: Run a geo-holdout test first. Cut paid social in 10-20% of markets and measure overall growth for a quarter. If growth tanks in those markets, you know paid social has spillover effects.
+
+**Transition:** "Let me summarize CAC/LTV before we move on..."
+-->
+
 ---
 
 ## CAC/LTV: Key Takeaways
@@ -1379,6 +2418,31 @@ A: Holdout tests or market experiments. Turn off a channel in some geos and meas
 4. **Calculate by channel** — aggregate hides important variation
 5. **Channels interact** — cutting one may hurt others
 6. **Payback matters** — not just ratio (cash flow implications)
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** These six takeaways capture the essential lessons of CAC/LTV analysis. Points 4-6 are often overlooked by analysts who focus only on the aggregate ratio.
+
+**Key point:** CAC/LTV analysis is more nuanced than a simple ratio. Channel-level analysis, interaction effects, and payback period all matter.
+
+**Say something like:**
+"Six takeaways from CAC/LTV.
+
+One: Use fully-loaded CAC. Don't just count ad spend — include salaries, tools, creative production. The true cost is higher than you think.
+
+Two: Project LTV conservatively. Extrapolating from 6 months to 24 months is guessing. Be humble about your predictions.
+
+Three: Use cohort-based analysis. Track actual customers over time. Simple formulas are shortcuts that hide important patterns.
+
+Four: Calculate by channel. The aggregate LTV:CAC ratio hides huge variation. Organic at 5x and paid social at 0.9x average to 2x — but that masks a problem.
+
+Five: Channels interact. This is the MindfulApp lesson. Cutting one channel may hurt others in ways you can't see in attribution.
+
+Six: Payback matters. A 3x LTV:CAC ratio sounds great, but if payback is 18 months, your cash flow suffers. Time to recoup investment matters, not just the final ratio."
+
+**Transition:** "Let me summarize what we've learned about all four acquisition analyses..."
+-->
 
 ---
 
@@ -1396,6 +2460,29 @@ A: Holdout tests or market experiments. Turn off a channel in some geos and meas
 | **Attribution** | Which channels brought them? | Multi-model comparison |
 | **Campaign** | Did spend cause the lift? | Counterfactual estimation |
 | **CAC/LTV** | Worth more than they cost? | Cohort-based unit economics |
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This table summarizes the four acquisition analyses covered in Block 2. Each has a core question and a key method. Use this slide to help students see the bigger picture before moving to retention and growth.
+
+**Key point:** Each analysis answers a different question about customer acquisition. Together, they form a complete picture.
+
+**Say something like:**
+"Let me summarize the four acquisition analyses we've covered.
+
+Funnel analysis answers: Where do we lose them? You're looking at step-by-step conversion rates to find the biggest drops.
+
+Attribution answers: Which channels brought them? You compare multiple models and look for disagreements to understand channel contributions.
+
+Campaign effectiveness answers: Did the spend cause the lift? You estimate counterfactuals to separate correlation from causation.
+
+CAC/LTV answers: Are they worth more than they cost? You track cohort-based unit economics to see if acquisition is profitable.
+
+These four analyses give you a complete picture of the acquisition side of the customer journey. For your capstone, you'll pick 2-3 that are most relevant to your specific problem."
+
+**Transition:** "Before we move on, let me highlight the common thread across all these analyses..."
+-->
 
 ---
 
@@ -1451,15 +2538,69 @@ After break, we cover **Retention & Growth Analyses:**
 | **Expansion** | How do they grow? |
 | **Ecosystem** | How do products interact? |
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the preview for Block 3 (Day 2). Give students a sense of what's coming so they can connect the acquisition analyses to retention and growth during the weekend.
+
+**Key point:** Block 3 covers the other side of the customer journey — keeping and growing customers you've acquired.
+
+**Say something like:**
+"After our break, we'll move to the other side of the customer journey: retention and growth.
+
+Retention analysis: Why do they leave? Understanding churn patterns.
+
+Power user analysis: Who are our best customers? Finding the users who generate the most value.
+
+Failure analysis: What's broken? Root cause analysis when things go wrong.
+
+Expansion analysis: How do they grow? Understanding upsells, upgrades, and expansion revenue.
+
+Ecosystem analysis: How do products interact? Understanding how multiple products or features work together.
+
+The same themes apply — interactions, counter-metrics, pre-mortems. But the questions are different. Acquisition is about getting customers in the door. Retention and growth are about keeping them and making them more valuable over time.
+
+Your weekend assignment will touch on both. You'll think about which analyses are most relevant to your capstone scenario."
+
+**Transition:** "Any quick questions before we break?"
+-->
+
 ---
 
 ## Questions?
 
 <!--
 INSTRUCTOR NOTE:
-Take 2-3 questions max.
-Common Q: "Which analysis should I start with?"
-A: Depends on the problem. Funnel if conversion is the issue, Attribution if budget allocation, etc. The Brief's methodology section forces you to justify.
+
+**Background:** This is a brief Q&A to close Block 2 before transitioning to Day 2's content preview. Keep it to 2-3 questions maximum to stay on schedule. Students will have more time to ask questions during the weekend assignment.
+
+**Key point:** Answer 2-3 questions concisely, then transition to the Day 2 preview.
+
+**Common questions and answers:**
+
+Q: "Which analysis should I start with for my capstone?"
+A: Depends on the problem. Funnel if conversion is the issue, Attribution if budget allocation, CAC/LTV if unit economics are the question. The Brief's methodology section forces you to justify your choice. Start with the core business question and work backwards to the analysis.
+
+Q: "Do I need to do all four analyses?"
+A: No — you'll pick 2-3 that are most relevant to your capstone problem. The Brief template asks you to justify why those specific analyses answer your business question.
+
+Q: "How deep do I need to go on causal inference?"
+A: Understand the concepts well enough to know when your analysis can make causal claims and when it can only show correlation. You don't need to implement synthetic control from scratch, but you should know when to recommend it.
+
+Q: "What tools should I use for these analyses?"
+A: Python or SQL for most data work. The specific tools matter less than understanding the logic. For campaign effectiveness, Google has open-source libraries; for attribution, most ad platforms have built-in tools you'd use in practice.
+
+Q: "What if my capstone company doesn't have good data?"
+A: This is common. Part of your Brief should identify data gaps and what's achievable with available data. Sometimes the recommendation is 'instrument these events before running this analysis.'
+
+**Say something like:**
+"Before we preview Day 2, let me take 2-3 quick questions. We'll have more time for questions during office hours and the weekend assignment."
+
+[After 2-3 questions]
+
+"Great questions. Hold onto any others — you'll have plenty of time to dig deeper during the assignment. Let me give you a quick preview of what's coming on Day 2..."
+
+**Transition:** "Let me give you a preview of Day 2..."
 -->
 
 ---
