@@ -194,9 +194,13 @@ Here's the connection to this course: all three require a well-scoped project. I
 Each Brief section maps to a capstone question:
 
 - **Problem & Decision** → What question are you answering?
+
 - **Metrics** → How will you measure success?
+
 - **Stakeholders** → Who is your sponsor?
+
 - **Methodology** → What analyses will you run?
+
 - **Scope** → What's in and out?
 
 <!--
@@ -337,8 +341,11 @@ The Brief forces you to address all of these before you start. That's why we fil
 
 Your sponsor is your primary stakeholder. They:
 - Define the business problem
+
 - Provide access to data
+
 - Give feedback on approach
+
 - Validate findings make sense
 
 **Ideal sponsor:** Someone with a real question AND time to engage.
@@ -390,8 +397,11 @@ If you haven't started yet, **start today.**
 
 Why early matters:
 - Good projects get claimed
+
 - Building relationships takes time
+
 - Data access takes time
+
 - Scope negotiation takes time
 
 March 16 is your assignment deadline. That's 9 weeks away.
@@ -430,9 +440,13 @@ March 16 is your deadline. That's 9 weeks away. 9 weeks is not a lot of time for
 ## Where to Find Projects
 
 - **Your employer** — Know the data (but may be narrow)
+
 - **CEU network** — Curated, committed sponsors (competitive)
+
 - **Personal network** — Relationship exists (quality varies)
+
 - **Cold outreach** — Unlimited options (low response)
+
 - **Nonprofits/NGOs** — Meaningful work (less data sophistication)
 
 **Best approach:** Multiple channels simultaneously.
@@ -469,8 +483,11 @@ Best approach: pursue multiple channels simultaneously. Don't wait to hear back 
 Most projects come through relationships. Activate your network:
 
 1. **LinkedIn post** — "Looking for analytics capstone project for [school/program]"
+
 2. **Email to contacts** — Personal ask to former colleagues, managers
+
 3. **Alumni network** — CEU alumni who've done capstones
+
 4. **Professional groups** — Meetups, Slack communities
 
 **The ask:** "Do you know anyone with a data question they'd like help with?"
@@ -587,12 +604,16 @@ Sponsors often want **more** than is feasible.
 
 **Your job:** Negotiate a scope that's:
 - Valuable to them
+
 - Feasible for you
+
 - Demonstrable as a capstone
 
 **How:**
 - "What's the most important question?"
+
 - "If we could only answer one thing, what would it be?"
+
 - "What would you do with the answer?"
 
 <!--
@@ -636,7 +657,9 @@ Use these questions. They're magic."
 
 **Key moves:**
 - Acknowledge their big goal
+
 - Propose a specific slice
+
 - Check if it's valuable
 
 <!--
@@ -725,9 +748,13 @@ Take 2 minutes. Would you take this project? What questions would you ask before
 
 **What you'll receive:** A unique 2-page business scenario describing:
 - A company and its situation
+
 - A business problem
+
 - Key stakeholders
+
 - Available data
+
 - Constraints
 
 **What you'll submit:** A complete Analytics Project Brief for that scenario.
@@ -764,8 +791,11 @@ Each student receives a **different scenario**.
 
 This is intentional:
 - Prevents copying
+
 - Forces independent thinking
+
 - Creates variety for class discussion
+
 - Mirrors real-world (you don't get the same problem as a colleague)
 
 Your scenario will be distributed via email after class today.
@@ -1025,13 +1055,18 @@ This is where most points are lost. Two parts:
 
 **Internal Consistency (10 pts):**
 - Do your metrics align with your methodology?
+
 - Does your pre-mortem connect to your risks and stakeholders?
+
 - Do decision criteria match your problem statement?
+
 - Does scope match the timeline and data you have?
 
 **Professional Quality (10 pts):**
 - Clear, concise writing
+
 - Would you present this to a real sponsor?
+
 - No contradictions between sections
 
 <!--
@@ -1068,10 +1103,15 @@ If your Brief reads like 10 separate documents pasted together, you'll lose poin
 ## Process Recommendation
 
 1. **Read the scenario twice** — First for overview, second for details
+
 2. **Identify the core decision** — What will this analysis inform?
+
 3. **Draft the metric first** — Forces precision early
+
 4. **Work through stakeholders** — Who might block? Why?
+
 5. **Select methodology** — Which 2-3 analyses apply?
+
 6. **Write the pre-mortem last** — After you understand the full picture
 
 <!--
@@ -1415,8 +1455,11 @@ But the **discipline of scoping projects well** is durable.
 
 In 10 years:
 - You may not remember SQL syntax
+
 - You will remember to ask "what breaks if we succeed?"
+
 - You will remember to identify blockers before presenting
+
 - You will remember to scope before analyzing
 
 **That's what this course is for.**
@@ -1484,12 +1527,16 @@ This creates closure and reinforces learning through verbalization.
 
 **Upcoming:**
 - Scenario email: Today
+
 - Assignment due: January 16
+
 - Exam: January 27
+
 - Weekly write-ups: Jan 23 – Feb 27 (6 weeks)
 
 **Contact:**
 - rubiae@ceu.edu
+
 - Office hours by appointment
 
 <!--

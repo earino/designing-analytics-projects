@@ -42,7 +42,9 @@ Today we cover 9 foundational analyses. You won't memorize them all—and you sh
 
 **Your goal:**
 1. Know what each analysis answers conceptually
+
 2. Recognize which one applies to a given problem
+
 3. Know where to find the detailed example when you need it
 
 Each analysis has a complete Brief example in `templates/examples/`. Use them.
@@ -290,6 +292,7 @@ A: Usually users, to avoid double-counting the same person who abandons and retu
 
 Two ways to view:
 - **Percentage view:** Which step has the worst conversion rate?
+
 - **Absolute view:** Which step loses the most users?
 
 Sometimes they're different. A 5% drop from 100K users (5K lost) matters more than a 20% drop from 1K users (200 lost).
@@ -366,9 +369,13 @@ A: Start with the obvious ones: device, new/returning, traffic source. Then let 
 ## Common Funnel Data Issues
 
 - **Missing events** — Event counts << page views → undercounts
+
 - **Duplicate events** — Same user/timestamp → overcounts
+
 - **Bot traffic** — Unusual patterns, data center IPs → inflates top
+
 - **Cross-device** — User appears twice → undercounts
+
 - **Session stitching** — Gaps in journey → breaks logic
 
 **Always validate data before analyzing.**
@@ -478,9 +485,13 @@ A: Don't accuse their UI. Present the data objectively. If their UI is the probl
 ## Funnel Analysis: Key Takeaways
 
 1. **Define stages with event names** — not page names, not intentions
+
 2. **Calculate both % and absolute drops** — they tell different stories
+
 3. **Segment immediately** — the insight is in the segments
+
 4. **Validate data first** — logging gaps will mislead you
+
 5. **Counter-metrics matter** — conversion isn't the only goal (AOV, fraud)
 
 <!--
@@ -778,8 +789,11 @@ A: Convenience. It's easy to implement, easy to explain, and channels like Googl
 
 If user had 4 touchpoints before a $100 conversion:
 - LinkedIn: $25
+
 - Content: $25
+
 - Email: $25
+
 - Search: $25
 
 **Bias:** Treats all touchpoints as equal, ignores timing
@@ -861,7 +875,9 @@ Typical: **40% first / 20% middle (split) / 40% last**
 
 Recognizes that:
 - First touch introduced the user (awareness)
+
 - Last touch closed the deal (conversion)
+
 - Middle touches helped but were less decisive
 
 **Popular because it feels intuitively fair.**
@@ -1024,8 +1040,11 @@ A: Focus on the top 10-20 paths by volume or value. There's a long tail of rare 
 ## Data Quality Nightmares
 
 - **Cross-device** — User on phone, converts on laptop → appears as two users
+
 - **Cookie deletion** — Privacy browsers → touchpoints disappear
+
 - **Walled gardens** — FB/Google limit data → can't see full journey
+
 - **UTM inconsistency** — Different teams → channels miscategorized
 
 Attribution is only as good as your tracking.
@@ -1136,10 +1155,15 @@ A: Acknowledge their contribution explicitly. Position it as 'Search is essentia
 ## Attribution: Key Takeaways
 
 1. **Touchpoint = user_id + timestamp + channel** — you need all three
+
 2. **No model is "right"** — present multiple, look for disagreements
+
 3. **Attribution windows matter** — be explicit about your choice
+
 4. **Path analysis reveals interactions** — channels don't work alone
+
 5. **Data quality limits everything** — cross-device and cookies kill accuracy
+
 6. **Validate with holdouts** — before major budget shifts, test causally
 
 <!--
@@ -1227,8 +1251,11 @@ If ONLY paid social on mobile has the problem, it might be both — or there's a
 **Key questions to consider:**
 
 1. How would Funnel Analysis help you here?
+
 2. How would Channel Attribution help you here?
+
 3. What if both are right — how do you untangle the effects?
+
 4. What data would you need to decide?
 
 <!--
@@ -1322,7 +1349,9 @@ A **counterfactual** is: *"What would have happened if we hadn't done X?"*
 
 **The Twin Study Analogy:**
 - Twin A takes drug → better in 3 days
+
 - Twin B takes placebo → better in 5 days
+
 - Difference (2 days) = **causal effect**
 
 **The problem in marketing:** We don't have twins. We must *construct* a comparison group.
@@ -1402,8 +1431,11 @@ A: Randomized holdout if you can plan ahead. Geo-matching for quick analysis whe
 
 Sales went up 12% during the campaign. But:
 - Economy improved
+
 - Competitor had a bad quarter
+
 - It was holiday season
+
 - New stores opened
 
 **Correlation is easy. Causation is hard.**
@@ -1736,8 +1768,11 @@ A: More data (longer campaign, more markets) or better experimental design. The 
 ## Common Pitfalls
 
 - **Control contamination** — Control sees treatment ads → geographic buffers
+
 - **Selection bias** — Best markets get campaign → randomize or match
+
 - **Pull-forward** — Sales spike then drop → measure full period
+
 - **Competitor confound** — Competitor enters control → validate matching
 
 <!--
@@ -1817,7 +1852,9 @@ A: Depends on purchase frequency. For consumer goods bought monthly, measure at 
 
 **Stakeholder complexity:**
 - CFO: Skeptical (burned by past campaign overspend)
+
 - CMO: Advocate (budget depends on proving effectiveness)
+
 - Agency: Worried (low ROI threatens $5M contract)
 
 <!--
@@ -1889,10 +1926,15 @@ A: Monitor news, check for unusual sales patterns in control markets, look for e
 ## Campaign Effectiveness: Key Takeaways
 
 1. **Correlation ≠ causation** — "sales went up" doesn't mean campaign worked
+
 2. **You need a counterfactual** — what would have happened without campaign
+
 3. **Randomized holdouts are gold standard** — plan them into future campaigns
+
 4. **Synthetic control for observational** — when you can't randomize
+
 5. **Check for pull-forward** — measure beyond campaign period
+
 6. **Report confidence intervals** — point estimates alone are misleading
 
 <!--
@@ -2116,7 +2158,9 @@ For now, just note: break down CAC by channel. The aggregate lies to you."
 
 LTV requires predicting the future:
 - How long will they stay? (Retention)
+
 - What will they spend? (Revenue)
+
 - What's your margin? (Profitability)
 
 **Simple formula:**
@@ -2298,8 +2342,11 @@ Channels don't work in isolation.
 
 What happens?
 - Brand awareness drops
+
 - Organic search volume decreases
+
 - Referral slows (fewer people know about you)
+
 - Overall growth drops 40%
 
 **Paid social was feeding the other channels.**
@@ -2413,10 +2460,15 @@ A: Run a geo-holdout test first. Cut paid social in 10-20% of markets and measur
 ## CAC/LTV: Key Takeaways
 
 1. **Use fully-loaded CAC** — include salaries, tools, creative
+
 2. **Project LTV conservatively** — extrapolation is guessing
+
 3. **Use cohort-based analysis** — track real behavior over time
+
 4. **Calculate by channel** — aggregate hides important variation
+
 5. **Channels interact** — cutting one may hurt others
+
 6. **Payback matters** — not just ratio (cash flow implications)
 
 <!--
@@ -2492,8 +2544,11 @@ These four analyses give you a complete picture of the acquisition side of the c
 
 Things don't work in isolation.
 - **Funnel:** Device handoffs (mobile browse, desktop buy)
+
 - **Attribution:** Multi-touch journeys
+
 - **Campaign:** Control market confounds
+
 - **CAC/LTV:** Channel awareness spillover
 
 **Before major decisions, test causally.** Attribution and correlation lie.

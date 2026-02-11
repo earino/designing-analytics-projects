@@ -25,7 +25,9 @@ January 8, 2026
 **Eduardo Arino de la Rubia** (rubiae@ceu.edu)
 
 - Senior Director of Data Science, Meta
+
 - Chief Data Scientist, Domino Data Lab (pre-seed → Series B, Sequoia)
+
 - Principal Data Scientist, Ingram
 
 Based in southern Spain.
@@ -113,8 +115,11 @@ No surprises. Each component connects to what we learn.
 
 You'll receive a 2-page business scenario describing:
 - A company and its situation
+
 - A business problem
+
 - Key stakeholders
+
 - Available data
 
 Your job: Scope it professionally using the Brief framework.
@@ -171,7 +176,9 @@ We'll cover the key concepts in class.
 Available in the course repository:
 
 - `templates/analytics_project_brief.md` — Blank template
+
 - `templates/examples/` — 9 worked examples (one per analysis)
+
 - `scenarios/` — Your assignment scenario (distributed individually)
 
 **Location:** QS B-421
@@ -184,7 +191,9 @@ Available in the course repository:
 
 **AI Usage:**
 - ✅ Brainstorm, draft, code you understand
+
 - ✅ Add "AI Usage" note describing what you used
+
 - ❌ Submit unedited AI-generated work
 
 **Academic Integrity:** Cheating is not negotiable.

@@ -292,7 +292,9 @@ Now let's see how they **connect** in a complete, realistic example.
 
 We'll walk through one Brief end-to-end and discuss:
 - What makes it strong?
+
 - What would you change?
+
 - How do sections reference each other?
 
 <!--
@@ -398,7 +400,9 @@ Also notice the hypothesis is quantified. Not 'organic is better than paid' but 
 **Counter-Metrics:**
 
 - **Growth rate** (Tradeoff) — Cutting unprofitable channels slows growth
+
 - **Engagement quality** (Guardrail) — Cheap users may not engage
+
 - **Brand awareness** (Tradeoff) — Paid builds awareness even with low direct ROI
 
 **Discussion:** Why is growth rate a "tradeoff" not a "guardrail"?
@@ -537,12 +541,16 @@ A: Common approach: proportional to headcount or time tracking. Perfect accuracy
 
 **In Scope:**
 - 5 channels (Paid Social, Paid Search, Organic, Referral, Influencer)
+
 - Cohorts from last 18 months
+
 - Monthly and annual subscribers
 
 **Out of Scope:**
 - Free tier users
+
 - B2B partnerships
+
 - Reactivated churned users
 
 **Discussion:** Why exclude free tier users? Is that the right call?
@@ -728,8 +736,11 @@ A: The pre-mortem is written BEFORE the analysis. The example shows what could g
 The Brief isn't 10 independent sections. They reference each other:
 
 - **Methodology** must answer the **Problem**
+
 - **Counter-metrics** anticipate **Pre-mortem** scenarios
+
 - **Stakeholder blockers** inform **how you present findings**
+
 - **Decision criteria** prevent analysis-paralysis
 
 <!--
@@ -758,9 +769,13 @@ On your assignment, this is where most points are lost. Sections that feel disco
 ## What Makes This Brief Strong?
 
 1. **Specific metric definition** — Not just "LTV:CAC" but fully specified
+
 2. **Counter-metrics with types** — Guardrail vs. tradeoff is clear
+
 3. **Named blocker with motivation** — "Jobs on the line" is concrete
+
 4. **Decision criteria include null result** — What if we find nothing?
+
 5. **Pre-mortem is specific** — Not generic "something went wrong"
 
 <!--
@@ -839,7 +854,9 @@ You'll see 3 business scenarios.
 
 For each one:
 1. **Which foundational analyses apply?** (Pick 2-3)
+
 2. **Why those analyses?** (Justify your choice)
+
 3. **What's the primary metric?** (Be specific)
 
 Work in groups of 3-4. You'll present and defend your choices.
@@ -1094,8 +1111,11 @@ There's no single "right" answer to analysis selection.
 
 It depends on:
 - **What data is available**
+
 - **What decisions need to be made**
+
 - **What's the timeline**
+
 - **What's been tried before**
 
 The Brief framework forces you to **justify** your choice, not just make it.
@@ -1167,7 +1187,9 @@ Ready?"
 
 Write these sections:
 1. **Primary Metric** — Full operational definition (2 min)
+
 2. **One Counter-Metric** — Label as Guardrail or Tradeoff, explain why it could break (3 min)
+
 3. **One Blocker** — Name the role, their motivation to resist, and your mitigation (3 min)
 
 **Work alone. Timer starts now.**
@@ -1351,7 +1373,9 @@ The test: Who has veto power over acting on your findings? Who might resist? Why
 
 **Warning signs:**
 - "While we're at it..."
+
 - "It would be easy to also..."
+
 - "Leadership asked if we could add..."
 
 **The test:** Does adding this help the decision we're trying to inform? If not, it's out of scope.
