@@ -32,7 +32,9 @@ January 8, 2026
 Before we dive in:
 
 - Grab coffee if you need it
+
 - Phones away (you'll want to focus)
+
 - We'll take breaks — this is a marathon, not a sprint
 
 <!--
@@ -99,8 +101,11 @@ A: Great question. That's exactly what we're going to learn today. Spoiler: they
 It's rarely the model. It's usually:
 
 - **Wrong problem** — solved something nobody needed
+
 - **Wrong metric** — optimized the wrong thing
+
 - **Wrong stakeholders** — built it, nobody used it
+
 - **Wrong scope** — took too long, world moved on
 
 This course is about avoiding those failures.
@@ -292,8 +297,11 @@ A: The specific format is mine, but the questions are universal. Every good PM, 
 By the end of this course, you will be able to:
 
 1. **Use the Analytics Project Brief** to scope projects
+
 2. **Identify counter-metrics** and stakeholder dynamics
+
 3. **Recognize which analyses** apply to different problems
+
 4. **Apply influence strategies** to gain buy-in
 
 <!--
@@ -533,7 +541,9 @@ The most important section. Everything flows from here.
 
 **Three questions to answer:**
 1. What business question will this analysis inform?
+
 2. Who is asking, and why now?
+
 3. Who is the ultimate decision maker?
 
 <!--
@@ -848,7 +858,9 @@ Beyond the grid, identify:
 
 The "why" matters. People block for reasons:
 - Threatens their budget
+
 - Makes their past work look bad
+
 - Creates work for their team
 
 <!--
@@ -989,12 +1001,16 @@ Be explicit about what's **in** and **out**:
 
 **In Scope:**
 - US market only
+
 - Last 6 months of data
+
 - Desktop and mobile web
 
 **Out of Scope:**
 - Native app (separate project)
+
 - International markets
+
 - Real-time implementation
 
 <!--
@@ -1027,10 +1043,12 @@ A: Point to the Brief. 'We agreed this was out of scope. We can add it, but let'
 
 **Analytical success:** What makes the analysis itself good?
 - Metric defined with <20% confidence interval
+
 - 3+ statistically significant drivers identified
 
 **Business success:** What makes it valuable?
 - Product team changes roadmap based on findings
+
 - Clear A/B test hypotheses generated
 
 <!--
@@ -1473,9 +1491,13 @@ A: Ideally, stakeholders decide with your input. You bring the options; they dec
 Five questions to find counter-metrics:
 
 1. **Direct negative:** What directly worsens when X improves?
+
 2. **Quality degradation:** What quality suffers?
+
 3. **User segments:** Which users are harmed?
+
 4. **Temporal tradeoffs:** What long-term metrics suffer?
+
 5. **Cross-functional:** Whose goals are threatened?
 
 <!--
@@ -1514,8 +1536,11 @@ A: No. You need 2-3 total, from whichever categories are most relevant. But chec
 
 **What breaks?**
 1. Revenue per order (people buy cheaper stuff to "just finish")
+
 2. Return rate (impulse purchases get returned)
+
 3. Customer service load (confused customers)
+
 4. Fraud rate (less friction = more fraud)
 
 <!--
@@ -1551,8 +1576,11 @@ Four counter-metrics, each with a causal story. That's the level of thinking I w
 
 **What breaks?**
 1. Notification opt-out rate (annoy people → they disable)
+
 2. App uninstalls (too many notifications → rage quit)
+
 3. Session quality (clicked but didn't engage)
+
 4. User trust (feels spammy → brand damage)
 
 <!--
@@ -1671,11 +1699,14 @@ A: Challenge yourself: are they all equally critical? Usually, 2-3 are existenti
 
 **Guardrail:** Hard stop. If this worsens, kill the project.
 - Fraud rate
+
 - Data quality
+
 - Legal compliance
 
 **Tradeoff:** Acceptable within bounds. Monitor but don't stop.
 - Short-term revenue (if LTV improves)
+
 - Complexity (if value justifies it)
 
 Label each counter-metric as one or the other.
@@ -1716,7 +1747,9 @@ Now let's practice.
 
 **Exercise (5 min):**
 1. Individually, write a pre-mortem (2-3 sentences)
+
 2. What went wrong? Be specific.
+
 3. What counter-metric would have caught this?
 
 <!--
@@ -1809,7 +1842,9 @@ INSTRUCTOR NOTE:
 Psychology research shows:
 
 - **Prospective hindsight** increases ability to identify reasons for outcomes by 30%
+
 - Easier to generate specific failures than abstract risks
+
 - Creates psychological safety to name concerns
 
 It's not pessimism. It's **preparation**.
@@ -1846,9 +1881,13 @@ This isn't pessimism. It's strategic imagination. You're not hoping for failure 
 ## Key Takeaways: Counter-Metrics
 
 1. **Every metric optimization breaks something else**
+
 2. **Use the "What Breaks" framework** to find counter-metrics
+
 3. **Identify 2-3** — not zero, not twenty
+
 4. **Label as Guardrail or Tradeoff**
+
 5. **Pre-mortem** surfaces risks you'd otherwise miss
 
 <!--

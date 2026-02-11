@@ -56,7 +56,9 @@ I know some of you are thinking 'this isn't technical.' You're right. It's not. 
 
 The best analysis fails if:
 - The wrong people see it
+
 - The right people don't buy in
+
 - A blocker kills it politically
 
 **Technical correctness is necessary but not sufficient.**
@@ -206,10 +208,12 @@ Beyond the grid, identify:
 
 **Champions:** Who actively wants this to succeed?
 - They'll advocate in meetings you're not in
+
 - They'll provide air cover when things get political
 
 **Blockers:** Who might resist?
 - **Why** do they resist? (Budget? Ego? Workload? Past failures?)
+
 - Understanding motivation enables mitigation
 
 <!--
@@ -312,9 +316,13 @@ Let me hear from a few of you. You — which analysis and who's in High Power, H
 ## Stakeholder Management: Key Takeaways
 
 1. **Map stakeholders to Power-Interest grid** — different strategies per quadrant
+
 2. **Identify champions and blockers** — understand *why* blockers resist
+
 3. **Pre-brief uncomfortable findings** — never ambush in meetings
+
 4. **Tailor communication by quadrant** — executives ≠ ICs
+
 5. **Politics is part of the job** — technical correctness isn't enough
 
 <!--
@@ -397,7 +405,9 @@ A: Only if it's actually shallow. You can be rigorous AND simple. The methodolog
 
 **Research shows:**
 - Simple explanations are rated as more credible
+
 - Jargon reduces persuasion (even with expert audiences)
+
 - Visual clarity increases agreement
 
 Complex ≠ Rigorous. Complex = Hard to trust.
@@ -469,8 +479,11 @@ Here's the rule: if an executive can't understand it in 30 seconds, simplify. If
 Before presenting, ask:
 
 1. **Can I explain this in one sentence?**
+
 2. **Would my non-technical friend understand?**
+
 3. **What's the ONE number that matters?**
+
 4. **Is everything else supporting detail?**
 
 If you can't pass this test, you're not ready to present.
@@ -598,7 +611,9 @@ Most successful presentations use 2-3 strategies combined. Let me walk you throu
 
 **When to use:**
 - Stakeholder respects hierarchy
+
 - You have genuine top-down support
+
 - Decision needs organizational weight
 
 <!--
@@ -627,7 +642,9 @@ The danger: don't fake it. If you say 'the VP supports this' and the VP hasn't a
 You probably don't have inherent authority. So:
 
 1. **Get a sponsor** — Find a leader who supports your work
+
 2. **Secure explicit endorsement** — "Can I say you've reviewed this?"
+
 3. **Cite the ask** — "This was requested by [leader]"
 
 **Warning:** Don't fake authority. Being caught undermines everything.
@@ -665,7 +682,9 @@ The warning is important: don't fake it. Don't say 'the CEO supports this' if yo
 
 **When to use:**
 - Stakeholder is technical or detail-oriented
+
 - Your personal credibility isn't established yet
+
 - The methodology is complex or novel
 
 <!--
@@ -692,8 +711,11 @@ This is the natural strategy for junior analysts. You might not have authority o
 ## Credibility: How to Build It
 
 1. **Get peer review** — Have respected ICs review your work
+
 2. **Cite precedent** — "This is the same approach Airbnb used for..."
+
 3. **Show your work** — Make methodology transparent and available
+
 4. **Acknowledge limitations** — Credible people admit uncertainty
 
 **Warning:** Over-claiming expertise you don't have destroys credibility permanently.
@@ -734,7 +756,9 @@ The warning: don't over-claim expertise. If you claim to be an expert in somethi
 
 **When to use:**
 - Stakeholder is risk-averse
+
 - Decision feels uncertain
+
 - You have relevant data or benchmarks
 
 <!--
@@ -763,8 +787,11 @@ And obviously useful when you have the data. Survey results, benchmarks, competi
 ## Social Proof: How to Build It
 
 1. **Survey data** — What do users/customers actually say?
+
 2. **Industry benchmarks** — What do peers do?
+
 3. **Internal precedent** — "We did something similar for X product"
+
 4. **Competitive intelligence** — What are competitors doing?
 
 **Warning:** Cherry-picked social proof backfires. Be honest about what the data shows.
@@ -808,7 +835,9 @@ A: Then don't force it. Use a different strategy. Weak social proof is worse tha
 
 **When to use:**
 - Stakeholder has stated priorities or values
+
 - Organization has clear strategy
+
 - You can draw genuine connection
 
 <!--
@@ -837,8 +866,11 @@ The key word is genuine. If you force a connection that isn't there, it feels ma
 ## Consistency: How to Build It
 
 1. **Know the roadmap** — What has leadership committed to?
+
 2. **Quote back priorities** — "You mentioned [X] was important..."
+
 3. **Show alignment** — Make the connection explicit
+
 4. **Avoid contradictions** — Don't recommend things that conflict with stated goals
 
 **Warning:** Forced connections feel manipulative. The alignment must be genuine.
@@ -946,8 +978,11 @@ CFOs often respond to data and financial alignment more than authority.
 ## The Wrong Strategy Backfires
 
 - **Technical expert** + Authority → *"Show me the math"*
+
 - **Senior executive** + Excessive detail → *"I don't have time"*
+
 - **Risk-averse PM** + Novelty framing → *"Too risky"*
+
 - **Data-driven leader** + Anecdotes only → *"Where's the evidence?"*
 
 **Know your audience.** The wrong strategy is worse than no strategy.
@@ -1038,8 +1073,11 @@ Champions advocate for you in rooms you're not in.
 
 **Give them:**
 1. **The one-sentence summary** — What they'll say when asked
+
 2. **The killer stat** — The number that makes the case
+
 3. **Anticipated objections + responses** — So they can defend
+
 4. **Your recommendation clearly** — So they don't misrepresent
 
 <!--
@@ -1120,10 +1158,15 @@ A: You might not. But you've reduced their opposition and shown respect. Even if
 Before any major presentation:
 
 1. **Identify who might be uncomfortable**
+
 2. **Schedule 15-min 1:1** — "I want to get your input before the meeting"
+
 3. **Share key findings** — No surprises
+
 4. **Solicit feedback** — "What am I missing?"
+
 5. **Incorporate reasonable feedback** — Shows you listened
+
 6. **In the meeting** — They're prepared, not ambushed
 
 This transforms blockers into (at worst) neutrals.
@@ -1170,10 +1213,15 @@ A: Better to know now than in the meeting. If they're hostile privately, you hav
 
 **Pre-brief approach:**
 - Meet privately before presentation
+
 - Frame: "I want to understand your perspective"
+
 - Share findings early
+
 - Ask: "What am I missing about how Search contributes?"
+
 - Incorporate valid points
+
 - In meeting: "As [name] and I discussed, there are tradeoffs here..."
 
 <!--
@@ -1379,9 +1427,13 @@ One more. Anyone suggest pre-briefing the PM before the meeting?
 ## Debrief: What Makes Influence Work
 
 1. **Know your audience** — One person, not "the team"
+
 2. **Have a clear recommendation** — Specific action
+
 3. **Choose strategies based on stakeholder** — Not one-size-fits-all
+
 4. **Pre-brief blockers** — Never surprise
+
 5. **Make it easy to understand** — Processing fluency
 
 Influence isn't manipulation. It's clear communication + stakeholder awareness.
