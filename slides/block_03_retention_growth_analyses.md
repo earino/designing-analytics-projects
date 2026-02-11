@@ -43,8 +43,11 @@ Block 3 is about **keeping** and **growing** them.
 
 The analyses in this block answer:
 - Why do they leave? (Retention)
+
 - Who matters most? (Power User)
+
 - What's broken? (Failure)
+
 - How do they grow? (Expansion)
 
 <!--
@@ -133,6 +136,7 @@ A: It depends on the product category. Gaming apps: 20-30% D30 is solid. Product
 **Acquisition is expensive. Retention compounds.**
 
 - Improving acquisition 20% → 20% more users
+
 - Improving retention 20% → 20% more users **every cohort, forever**
 
 Small retention improvements have massive long-term impact.
@@ -176,7 +180,9 @@ A: Several reasons. Acquisition is more visible. Executives can see ads running.
 
 **Critical decision:** What counts as "active"?
 - App open? (low bar)
+
 - Core action? (higher bar, more meaningful)
+
 - Purchase? (highest bar)
 
 <!--
@@ -266,7 +272,9 @@ A: DN is more common for quick comparisons. Rolling is better for understanding 
 
 **Shape matters:**
 - **Steep early drop** = First-time experience problem
+
 - **Continued decline** = No habit formation
+
 - **Flattens** = Found product-market fit for those users
 
 Where the curve flattens = your "true" retention rate.
@@ -393,6 +401,7 @@ A: Start with product intuition. What do you think the 'aha moment' is? Test tha
 
 Users who add 3+ friends retain better. But:
 - Did friend-adding **cause** retention?
+
 - Or do **naturally engaged users** both add friends AND retain?
 
 If you force friend-adding on disengaged users, they might still churn.
@@ -550,9 +559,13 @@ A: Recommend a test: Show friend-adding prompts to 50% of users, suppress for 50
 ## Retention Analysis: Key Takeaways
 
 1. **Define "active" precisely** — same event across all analysis
+
 2. **DN vs. rolling retention** — be explicit about which you're using
+
 3. **Cohort comparisons reveal trends** — aggregates hide insights
+
 4. **Driver analysis is correlational** — A/B test before mandating
+
 5. **Counter-metrics matter** — don't break signup to fix D7
 
 <!--
@@ -599,8 +612,11 @@ Most products have highly skewed engagement:
 
 Power user analysis asks:
 - How concentrated is engagement?
+
 - Who are these users?
+
 - What do they do differently?
+
 - Should we optimize for them or broaden engagement?
 
 <!--
@@ -689,6 +705,7 @@ A: Yes, you can create composite scores or use multiple definitions in parallel.
 
 Often, engagement follows a power law:
 - Top 10% of users → 50%+ of engagement
+
 - Top 20% of users → 80%+ of engagement
 
 The exact numbers vary, but skew is almost universal.
@@ -792,13 +809,19 @@ Track user journeys over time:
 **Two options:**
 
 1. **Optimize for power users**
+
    - They drive most engagement
+
    - High retention, high value
+
    - Risk: Alienate casual users
 
 2. **Broaden engagement**
+
    - More users become power users
+
    - Larger addressable base
+
    - Risk: Dilute product for core users
 
 **This is a strategy decision, not an analytics one.** Your job is to inform it.
@@ -936,9 +959,13 @@ A: Personalization. Different users see different experiences based on their usa
 ## Power User Analysis: Key Takeaways
 
 1. **Engagement is usually skewed** — measure how much
+
 2. **Define "power" with a clear metric** — time, actions, or revenue
+
 3. **Profile power users behaviorally** — what do they do differently?
+
 4. **Counter-metric: casual user health** — don't alienate the majority
+
 5. **This informs strategy** — analysts provide data, leadership decides
 
 <!--
@@ -991,8 +1018,11 @@ Fifth — and this is the professional practice point: this informs strategy, it
 **Questions to consider:**
 
 1. Why might power users be unaffected while casual users suffer?
+
 2. Is this a Retention Analysis problem or a Power User Analysis problem?
+
 3. What counter-metric should have been tracked during the redesign?
+
 4. What's your hypothesis for the root cause?
 
 <!--
@@ -1049,6 +1079,7 @@ Stand up. Walk around. The last 30 minutes cover Failure and Expansion analyses.
 
 Different from other analyses:
 - **Funnel analysis** tells you *where* users drop off
+
 - **Failure analysis** tells you *why*
 
 Often **exploratory** — you don't have a hypothesis yet. You're categorizing problems.
@@ -1402,10 +1433,15 @@ A: Build a whitelist of valid brand names and product terms. A/B test with a sma
 ## Failure Analysis: Key Takeaways
 
 1. **Start with manual sampling** — you need to see the failures
+
 2. **Build a taxonomy** — 3-7 categories, mutually exclusive
+
 3. **Validate with inter-rater reliability** — if classifiers disagree, refine
+
 4. **Size by impact, not just volume** — small category can have big $$$
+
 5. **This is exploratory** — you're building hypotheses, not testing them
+
 6. **Counter-metrics prevent over-correction** — fixing one thing can break another
 
 <!--
@@ -1448,7 +1484,9 @@ Sixth: counter-metrics prevent over-correction. Fixing zero-results might break 
 
 Questions:
 - Why do free users upgrade to paid?
+
 - Why do basic subscribers upgrade to premium?
+
 - What triggers expansion (more seats, higher tier)?
 
 This is about **extracting more value from existing customers** — often cheaper than acquisition.
@@ -1492,7 +1530,9 @@ A: Expansion directly drives LTV. A customer who upgrades has higher lifetime va
 
 **Freemium math:**
 - Free users: Large base, low/no revenue
+
 - Paid users: Smaller base, meaningful revenue
+
 - Premium: Smallest base, highest revenue
 
 **The question:** What makes someone convert?
@@ -1643,6 +1683,7 @@ A: Hit rate × conversion rate = percentage of users who convert due to that lim
 Lowering limits increases conversion, but:
 
 - **Too high:** Few hit the limit, low conversion
+
 - **Too low:** Users feel nickeled-and-dimed, churn
 
 **Finding the sweet spot requires experimentation.**
@@ -1794,9 +1835,13 @@ A: Look at behavior patterns. Users who've almost hit limits and expressed frust
 ## Expansion Analysis: Key Takeaways
 
 1. **Conversion drivers are behavioral** — what triggers the upgrade moment?
+
 2. **Limits are powerful but dangerous** — too aggressive alienates users
+
 3. **Targeting requires validation** — holdout tests before aggressive prompts
+
 4. **Counter-metric: free user health** — don't kill the funnel to boost conversion
+
 5. **Selection bias is real** — engaged users ≠ incremental conversions
 
 <!--
@@ -1839,7 +1884,9 @@ This is the same pattern we saw in retention driver analysis. Correlation-based 
 
 Questions:
 - Do our products complement each other (1+1=3)?
+
 - Or cannibalize each other (1+1=1.5)?
+
 - Should we invest in cross-product features?
 
 Relevant for: Multi-product companies, platform businesses, feature suites.
@@ -1918,6 +1965,7 @@ You observe: Users of both Product A and B retain 40% better than single-product
 
 **But:** Is that because:
 1. Using both products **causes** higher retention? (Complement)
+
 2. Highly engaged users **naturally** use more products? (Selection bias)
 
 If it's selection bias, pushing cross-product adoption won't help — and may annoy users.
@@ -2024,7 +2072,9 @@ A: Very common. Almost every multi-product company I've seen has done this analy
 
 **Counter-metrics:**
 - Individual product focus (dilution risk)
+
 - User overwhelm (too many cross-promos)
+
 - Cannibalization (one product grows at another's expense)
 
 **Pre-mortem:** We found 40% better retention for multi-product users and invested heavily in cross-product features. But it was selection bias — engaged users adopt everything naturally. Cross-product prompts annoyed single-product users, and FriendFeed DAU dropped 10%.
@@ -2068,9 +2118,13 @@ A: Holdout test. Suppress cross-product prompts for 20% of users. If prompted us
 ## Ecosystem Analysis: Key Takeaways
 
 1. **Multi-product correlation ≠ causation** — selection bias is likely
+
 2. **Use natural experiments** — outages reveal true dependence
+
 3. **Holdout test before investing** — don't assume cross-product features help
+
 4. **Watch for cannibalization** — products may compete internally
+
 5. **This informs platform strategy** — big investment decisions
 
 <!--
@@ -2124,7 +2178,9 @@ That's ecosystem analysis. It shares the selection bias lesson with retention, p
 **Multiple analyses today shared this trap:**
 
 - Retention drivers: Engaged users do everything
+
 - Power users: They were always going to be power users
+
 - Expansion: High-propensity users would convert anyway
 
 **Solution:** A/B test before major investments. Correlation ≠ causation.
@@ -2163,7 +2219,9 @@ A: If the intervention is cheap and reversible, sometimes you just try it. But f
 
 You now know:
 - **The Analytics Project Brief framework** (10 sections)
+
 - **Counter-metrics and adversarial thinking**
+
 - **9 foundational analyses** (4 acquisition + 5 retention/growth)
 
 **Day 2:** Stakeholders & Influence, then Application & Capstone Preparation.
@@ -2178,6 +2236,7 @@ You now know:
 **Day 2 starts at 10:50**
 
 - Block 4: Application & Practice
+
 - Block 5: Stakeholders & Influence
 
 **Before then:** Review the Brief template. Questions: rubiae@ceu.edu
